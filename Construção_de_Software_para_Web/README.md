@@ -1,3 +1,4 @@
-# Construção de Software para Web
-
-Este é um repositório para os projetos em sala da disciplina **Construção de Software para Web** da UVV.
+# Disciplina: Construção de Software para Web
+## Professor: Ricardo Mendes Costa Segundo
+## Período: 1º
+## Ano: 2022/1
