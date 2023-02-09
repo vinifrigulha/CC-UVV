@@ -58,3 +58,14 @@
 1. Computer Organization and Design, RISC-V Edition (2ª ed. 2021)
 
 2. Digital Design and Computer Architecture (2ª ed.)
+
+#
+
+## As 7 Grandes Idéias
+1. **Abstrações** - fugir do pensamento real, e buscar simplificar o complicado.
+2. **Caso comum** - não focar nos casos raros, mas nos comuns.
+3. **Paralelismo** - executar mais de uma função ao mesmo tempo.
+4. **Pipelining** - mais operações simultâneas aceleram o processo do que um executar todo o trabalho sozinho.
+5. **Predição** - prever os próximos lançamentos
+6. **Hierarquia** - ter o mais rápido e menor, e o mais lento e maior.
+7. **Redundância** - garantir que determinada operação seja executada por mais de um componente, embora apenas um já fosse suficiente.
