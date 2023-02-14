@@ -69,3 +69,41 @@
 5. **Predição** - prever os próximos lançamentos
 6. **Hierarquia** - ter o mais rápido e menor, e o mais lento e maior.
 7. **Redundância** - garantir que determinada operação seja executada por mais de um componente, embora apenas um já fosse suficiente.
+
+#
+
+## Aula 02 - 13/02/2023
+
+#
+
+## Hardware:
+É basicamente definido em dois estados:
+- Tem energia ➝ 1
+- Não tem energia ➝ 0
+
+## Compilador:
+Traduz alto nível para linguagem de máquina.
+Exemplo:
+- O compilador pega um código `print("Olá mundo")` e o converte em Assembly, que são um conjunto de instruções.
+
+> **Intrução:** é um comando que o hardware (CPU) entende e obedece (realiza alguma coisa).
+
+Uma CPU recebe, ao mesmo tempo, instruções e dados em um mesmo binário.
+
+> **OBS:** Um mesmo comando pode significar coisas totalmente diferentes dependendo da arquitetura onde esse comando está.
+
+#
+
+## Assembler: 
+Programa que traduz uma versão simbólica das instruções em sua versão binária (linguagem de máquina). Ele que lê o Assembly e o traduz para a LM.
+
+## Assembly:
+Linguagem formada pelas representações simbólicas das instruções.
+
+## Linguagem de Máquina:
+Uma representação binária das instruções.
+
+## Compilador:
+Transforma a linguagem de alto nível para o código em Assembly, daí o código em 
+Assembly é traduzido pelo Assembler para a linguagem de máquina.
+
