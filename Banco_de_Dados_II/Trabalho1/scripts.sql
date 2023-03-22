@@ -25,4 +25,15 @@ WHERE
 		b.cust_id = c.cust_id
         AND
         c.address != br.address
+
+SELECT
+        CONCAT(e.fname, " ", e.lname) Funcionário,
+        COUNT(a.open_emp_id) "Nº de Contas/ano"
+FROM
+		employee e,
+        account a
+WHERE e.assigned_branch_id = a.open_branch_id
+GROUP by e.fname
+#ORDER BY e.fname ASC 		# Ordem alfabética
+#ORDER BY a.open_date ASC 	# Ordem de abertura das contas
         
