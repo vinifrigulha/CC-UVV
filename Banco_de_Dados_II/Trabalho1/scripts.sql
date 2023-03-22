@@ -26,6 +26,8 @@ WHERE
         AND
         c.address != br.address
 
+
+/* 3ª Questão */
 SELECT
         CONCAT(e.fname, " ", e.lname) Funcionário,
         COUNT(a.open_emp_id) "Nº de Contas/ano"
