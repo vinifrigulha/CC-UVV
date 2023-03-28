@@ -71,49 +71,59 @@ ORDER by
 
 /* 4. Junções Internas, Agrupamento, Agregação, União e Concatenação */
 
-# Answer:
-/*
-ID	|	Cliente			|	Agência
-------+-----------------------------+-------------------
-15	|	John Spencer		|	Headquarters
-27	|	Northeast Cooling Inc.	|	Woburn Branch
-29	|	AAA Insurance Inc.	|	Quincy Branch
-28	|	Superior Auto Body	|	So. NH Branch
-*/
-
 SELECT
-	a.account_id "ID",
-    b.name "Cliente",
+	a.account_id "ID da Conta",
+    CONCAT(i.fname, " ", i.lname) "Cliente",
     br.name "Agência"
 FROM
-	account a,
-    business b,
-    branch br
+	branch br,
+    account a, 
+    customer c,
+    individual i,
+    (SELECT
+     	open_branch_id "id",
+     	MAX(avail_balance) "max"
+     FROM
+     	account
+     GROUP BY
+    	open_branch_id) a2
 WHERE
-	a.cust_id = b.cust_id
+	a.avail_balance = a2.max
+    AND
+    a.open_branch_id = a2.id
     AND
     a.open_branch_id = br.branch_id
-GROUP BY
-	br.name
-HAVING
-	MAX(a.avail_balance)
+    AND
+    a.cust_id = c.cust_id
+    AND
+    c.cust_id = i.cust_id
 UNION
 SELECT
 	a.account_id,
-    CONCAT(i.fname, " ", i.lname),
+    b.name,
     br.name
 FROM
-	account a,
-    individual i,
-    branch br
+	branch br,
+    account a, 
+    customer c,
+    business b,
+    (SELECT
+     	open_branch_id "id",
+     	MAX(avail_balance) "max"
+     FROM
+     	account
+     GROUP BY
+    	open_branch_id) a2
 WHERE
-	a.cust_id = i.cust_id
+	a.avail_balance = a2.max
+    AND
+    a.open_branch_id = a2.id
     AND
     a.open_branch_id = br.branch_id
-GROUP BY
-	br.name
-HAVING
-	MAX(a.avail_balance)
+    AND
+    a.cust_id = c.cust_id
+    AND
+    c.cust_id = b.cust_id
 
 
 /* 5. Visualização */
