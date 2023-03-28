@@ -46,7 +46,7 @@ WHERE
     AND
     c.cust_id = i.cust_id
     AND
-    br.city != c.city
+    br.city != c.city;
 
 
 /* 3. Junção Externa, Agrupamento, Agregação e Ordenação */
@@ -123,23 +123,33 @@ SELECT
 	b.name "Cliente"
 FROM
 	business b,
-    customer c,
-    branch br
+    account a,
+    branch br,
+    customer c
 WHERE
-	b.cust_id = c.cust_id
+	br.branch_id = a.open_branch_id
     AND
-    br.address != c.address
+    a.cust_id = c.cust_id
+    AND
+    c.cust_id = b.cust_id
+    AND
+    br.city != c.city
 UNION
 SELECT
 	CONCAT(i.fname, " ", i.lname)
 FROM
 	individual i,
-    customer c,
-    branch br
+    account a,
+    branch br,
+    customer c
 WHERE
-	i.cust_id = c.cust_id
+	br.branch_id = a.open_branch_id
     AND
-    br.address != c.address;
+    a.cust_id = c.cust_id
+    AND
+    c.cust_id = i.cust_id
+    AND
+    br.city != c.city;
 
 # Questão 2:
 SELECT * from clients;
