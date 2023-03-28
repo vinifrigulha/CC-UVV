@@ -15,6 +15,16 @@ WHERE
 
 
 /* 2. Junções Internas, Uniões e Seleções */
+ 
+#Answer:
+/*
+       CLIENTES
+----------------------
+Northeast Cooling Inc.
+James Hadley
+Margaret Young
+Richard Farley
+*/
 
 SELECT
 	b.name "Cliente"
