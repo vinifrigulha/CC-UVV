@@ -92,6 +92,10 @@ ORDER BY
     e.fname, e.start_date;
 ~~~
 
+### Resultado:
+
+
+
 
 ## 4. Junções Internas, Agrupamento, Agregação, União e Concatenação
 
