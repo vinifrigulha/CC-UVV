@@ -1,0 +1,14 @@
+\documentclass[article]
+\begin{document}
+\section{Projeção}
+
+Escreva uma projeção retornando o nome e sobrenome dos empregados
+$$ A \leftarrow \Pi_{fname, lname}(employee) $$
+
+Escreva a operação retornando os ids (fed_id) dos clientes de Salem
+$$ B \leftarrow \Pi_{fed\_id}(\sigma_{city = ´Salem´}(customer)) $$
+
+Escreva a operação retornando os endereços das empresas de Salem
+$$ C \leftarrow \Pi_{address}((\sigma_{city = ´Salem´}) \wedge (\sigma_{customer.cust\_id=business.cust\_id}))  $$
+
+\end{document}
