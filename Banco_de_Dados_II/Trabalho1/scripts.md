@@ -73,7 +73,7 @@ Margaret Young
 
 ## 3. Junção Externa, Agrupamento, Agregação e Ordenação
 
-~~~SQL
+~~~sql
 SELECT
 	CONCAT(e.fname, " ", e.lname) "Funcionário",
     YEAR(a.open_date) "Ano",
@@ -90,6 +90,22 @@ ORDER BY
 ~~~
 
 ### Resultado:
+
+Funcionário    	 | Qtd. de Transações |  Ano 
+:----------------|:-------------------|:-----
+John Blake     	 | 2                  | 2002 
+John Blake     	 | 1                  | 2004 
+Michael Smith    | 1                  | 2000 
+Michael Smith    | 1                  | 2002 
+Michael Smith    | 2                  | 2003 
+Michael Smith    | 4                  | 2004 
+Paula Roberts    | 2                  | 2000 
+Paula Roberts    | 2                  | 2002 
+Paula Roberts    | 3                  | 2004 
+Theresa Markham  | 2                  | 2001 
+Theresa Markham  | 2                  | 2002 
+Theresa Markham  | 1                  | 2003 
+Theresa Markham  | 1                  | 2004 
 
 
 
