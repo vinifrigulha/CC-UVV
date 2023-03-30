@@ -177,114 +177,30 @@ ID da Conta |  Cliente 	             | Agência
 29     	    | Superior Auto Body     | So. NH Branch
 28          | AAA Insurance Inc.     | Quincy Branch
 
-/* 5. Visualização */
+## 5. Visualização
 
-/*QUESTÃO 5*/
-/*Criando a visualização da 2 questão: */
-
-CREATE VIEW clients as
+~~~SQL
+CREATE VIEW clients AS
 SELECT
-    b.name "Cliente"
-FROM
-    business b,
-    account a,
-    branch br,
-    customer c
-WHERE
-    br.branch_id = a.open_branch_id
-    AND
-    a.cust_id = c.cust_id
-    AND
-    c.cust_id = b.cust_id
-    AND
-    br.city != c.city
-UNION
-SELECT
-    CONCAT(i.fname, " ", i.lname)
-FROM
-    individual i,
-    account a,
-    branch br,
-    customer c
-WHERE
-    br.branch_id = a.open_branch_id
-    AND
-    a.cust_id = c.cust_id
-    AND
-    c.cust_id = i.cust_id
-    AND
-    br.city != c.city;
-
-/*Criando a visualização da 4 questão: */
-
-CREATE VIEW identificadores as 
-SELECT
-    a.account_id "ID da Conta",
     CONCAT(i.fname, " ", i.lname) "Cliente",
-    br.name "Agência"
+    i.cust_id "IdCliente",
+    a.account_id "IdConta"
 FROM
-    branch br,
-    account a, 
-    customer c,
     individual i,
-    (SELECT
-     	open_branch_id "id",
-     	MAX(avail_balance) "max"
-     FROM
-     	account
-     GROUP BY
-    	open_branch_id) a2
+    account a,
+    branch br,
+    customer c
 WHERE
-    a.avail_balance = a2.max
-    AND
-    a.open_branch_id = a2.id
-    AND
-    a.open_branch_id = br.branch_id
+    br.branch_id = a.open_branch_id
     AND
     a.cust_id = c.cust_id
     AND
     c.cust_id = i.cust_id
-UNION
+union
 SELECT
-    a.account_id,
     b.name,
-    br.name
-FROM
-    branch br,
-    account a, 
-    customer c,
-    business b,
-    (SELECT
-     	open_branch_id "id",
-     	MAX(avail_balance) "max"
-     FROM
-     	account
-     GROUP BY
-    	open_branch_id) a2
-WHERE
-    a.avail_balance = a2.max
-    AND
-    a.open_branch_id = a2.id
-    AND
-    a.open_branch_id = br.branch_id
-    AND
-    a.cust_id = c.cust_id
-    AND
-    c.cust_id = b.cust_id
- 
- /*Visualização*/
- SELECT * from identificadores;
- SELECT * from clientes;
-
-
-
-
-
-
-
-CREATE VIEW clients as
-SELECT
-    b.name "Cliente"
+    b.cust_id,
+    a.account_id
 FROM
     business b,
     account a,
@@ -295,27 +211,21 @@ WHERE
     AND
     a.cust_id = c.cust_id
     AND
-    c.cust_id = b.cust_id
-    AND
-    br.city != c.city
-UNION
-SELECT
-    CONCAT(i.fname, " ", i.lname)
+    c.cust_id = b.cust_id;
+~~~
+
+
+### Código para a questão 2:
+
+~~~SQL
+SELECT DISTINCT
+    Cliente
 FROM
-    individual i,
-    account a,
-    branch br,
-    customer c
-WHERE
-    br.branch_id = a.open_branch_id
-    AND
-    a.cust_id = c.cust_id
-    AND
-    c.cust_id = i.cust_id
-    AND
-    br.city != c.city;
+    clients;
+~~~
 
-# Questão 2:
-SELECT * from clients;
+### Código para a questão 4:
 
-# Questão 4:
+~~~SQL
+
+~~~
