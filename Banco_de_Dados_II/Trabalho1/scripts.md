@@ -75,21 +75,18 @@ Margaret Young
 
 ~~~SQL
 SELECT
-    CONCAT(e.fname, " ", e.lname) "Funcionário",
-    CASE
-    	WHEN COUNT(a.open_emp_id) = 0 THEN "Nenhuma"
-        ELSE COUNT(a.open_emp_id)
-    END "Nº de Transações"
+	CONCAT(e.fname, " ", e.lname) "Funcionário",
+    YEAR(a.open_date) "Ano",
+    COUNT(*) "Qtd. de Transações"
 FROM
-	employee e
-LEFT OUTER JOIN 
-    account a 
-ON 
-    e.emp_id = a.open_emp_id
-GROUP BY 
-    e.emp_id
-ORDER BY 
-    e.fname, e.start_date;
+    employee e,
+	account a
+WHERE
+	a.open_emp_id = e.emp_id
+GROUP BY
+	Funcionário, Ano
+ORDER BY
+	e.fname, e.start_date, a.open_date;
 ~~~
 
 ### Resultado:
