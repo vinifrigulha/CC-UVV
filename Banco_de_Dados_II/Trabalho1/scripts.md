@@ -238,5 +238,26 @@ WHERE
 ### Código para a questão 4:
 
 ~~~SQL
-
+SELECT
+    IdConta,
+    Cliente,
+    br.name
+FROM
+    clients cl,
+    branch br,
+	(SELECT
+     	    IdAgencia,	
+     	    MAX(Saldo) "max"
+        FROM
+     	    clients
+        GROUP BY
+     	    IdAgencia) cl2
+WHERE
+    cl.Saldo = cl2.max
+    AND
+    cl.IdAgencia = cl2.IdAgencia
+    AND
+    cl.IdAgencia = br.branch_id
+ORDER BY
+    cl.IdAgencia;
 ~~~
