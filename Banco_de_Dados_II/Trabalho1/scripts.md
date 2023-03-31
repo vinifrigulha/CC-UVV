@@ -187,7 +187,7 @@ SELECT
     a.account_id "IdConta",
     br.branch_id "IdAgencia",
     a.avail_balance "Saldo",
-    YEAR(a.open_date) "DataAbertura"
+    c.city "Cidade"
 FROM
     individual i,
     account a,
@@ -206,7 +206,7 @@ SELECT
     a.account_id,
     br.branch_id,
     a.avail_balance,
-    YEAR(a.open_date)
+    c.city
 FROM
     business b,
     account a,
@@ -227,7 +227,12 @@ WHERE
 SELECT DISTINCT
     Cliente
 FROM
-    clients;
+    clients cl,
+    branch br
+WHERE
+	cl.IdAgencia = br.branch_id
+    AND
+    cl.Cidade != br.city;
 ~~~
 
 ### Código para a questão 4:
