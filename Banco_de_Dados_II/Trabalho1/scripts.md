@@ -174,8 +174,8 @@ ID da Conta |  Cliente 	             | Agência
 :----------:|:----------------------:|:--------:
 15 	    | John Spencer           | Headquarters
 27   	    | Northeast Cooling Inc. | Woburn Branch
-29     	    | Superior Auto Body     | So. NH Branch
-28          | AAA Insurance Inc.     | Quincy Branch
+28     	    | Superior Auto Body     | So. NH Branch
+29          | AAA Insurance Inc.     | Quincy Branch
 
 ## 5. Visualização
 
