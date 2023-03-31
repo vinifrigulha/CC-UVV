@@ -180,11 +180,13 @@ ID da Conta |  Cliente 	             | Agência
 ## 5. Visualização
 
 ~~~SQL
-CREATE VIEW clients AS
+#CREATE VIEW clients AS
 SELECT
     CONCAT(i.fname, " ", i.lname) "Cliente",
     i.cust_id "IdCliente",
-    a.account_id "IdConta"
+    a.account_id "IdConta",
+    br.branch_id "IdAgencia",
+    a.avail_balance "Saldo"
 FROM
     individual i,
     account a,
@@ -200,7 +202,9 @@ union
 SELECT
     b.name,
     b.cust_id,
-    a.account_id
+    a.account_id,
+    br.branch_id,
+    a.avail_balance
 FROM
     business b,
     account a,
