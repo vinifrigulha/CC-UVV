@@ -6,8 +6,8 @@ int main(){
 
   printf("Digite 10 números e obtenha a soma deles.\n\n");
   for(int i = 0; i < 10; i++){
-    printf("%dº valor: ", i+1);
-    scanf("%d", &vetor[i]);
+    printf("%dº valor: ", i+1); // %d se refere a valores inteiros
+    scanf("%d", &vetor[i]);     // scanf é a função de input em C
     soma += vetor[i];
   }
   
