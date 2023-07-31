@@ -5,7 +5,6 @@ int main(){
   int soma = 0;
 
   printf("Digite 10 números e obtenha a soma deles.\n\n");
-
   for(int i = 0; i < 10; i++){
     printf("%dº valor: ", i+1);
     scanf("%d", &vetor[i]);
