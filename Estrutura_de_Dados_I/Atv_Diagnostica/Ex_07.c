@@ -4,6 +4,7 @@ int main(){
   int vetor[10];
   int count = 0;
 
+  // Exibindo o vetor principal
   printf("Digite 10 números quaisquer.\n\n");
   for(int i = 0; i < 10; i++){
     printf("%dº número: ", i+1);
@@ -11,11 +12,14 @@ int main(){
     if(vetor[i] % 2 == 0) count++;
   }
 
-  if(count == 0) printf("\nNenhum número par foi digitado.");
+  if(count == 0){ 
+    printf("\nNenhum número par foi digitado.");
+  }
   else{
     int pares[count];
     int j = 0;
     
+    // Montando o vetor de números pares
     printf("\nForam digitados %d números pares. São eles:\n[", count);
     for(int i = 0; i < 10; i++){
       if(vetor[i] % 2 == 0){
@@ -23,9 +27,15 @@ int main(){
         j++;
       }
     }
+    
+    // Exibindo o vetor de números pares
     for(int i = 0; i < count; i++){
-      if(i < count - 1) printf("%d, ", pares[i]);
-      else printf("%d]", pares[i]);
+      if(i < count - 1){ 
+        printf("%d, ", pares[i]);
+      }
+      else{ 
+        printf("%d]", pares[i]); 
+      }
     }
   }
 
