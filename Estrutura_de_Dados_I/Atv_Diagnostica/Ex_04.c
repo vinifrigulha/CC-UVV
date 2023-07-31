@@ -12,10 +12,10 @@ int main(){
   int vetorB[10];
   int vetorC[10];
 
-  printf("Digite 10 números quaiquer para o vetor A.\n\n");
+  printf("Digite 10 números quaisquer para o vetor A.\n\n");
   preencherVetor(vetorA);
 
-  printf("\nDigite 10 números quaiquer para o vetor B.\n\n");
+  printf("\nDigite 10 números quaisquer para o vetor B.\n\n");
   preencherVetor(vetorB);
 
   for(int i = 0; i < 10; i++){
