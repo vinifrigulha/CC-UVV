@@ -24,8 +24,12 @@ int main(){
 
   printf("\nO vetor C tem os seguintes valores:\n\n [");
   for(int i = 0; i < 10; i++){
-    if(i < 9) printf("%d, ", vetorC[i]);
-    else printf("%d]", vetorC[i]);
+    if(i < 9){ 
+      printf("%d, ", vetorC[i]);
+    }
+    else{ 
+      printf("%d]", vetorC[i]);
+    }
   }
   
   return 0;
