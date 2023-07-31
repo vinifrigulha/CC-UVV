@@ -13,8 +13,12 @@ int main(){
 
   menor = maior = vetor[0];
   for(int i = 0; i < 10; i++){
-    if(menor > vetor[i]) menor = vetor[i];
-    if(maior < vetor[i]) maior = vetor[i];
+    if(menor > vetor[i]){ 
+      menor = vetor[i];
+    }
+    if(maior < vetor[i]){ 
+      maior = vetor[i];
+    }
   }
 
   printf("\nMenor valor do vetor: %d", menor);
