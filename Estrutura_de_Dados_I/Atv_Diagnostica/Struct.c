@@ -10,14 +10,14 @@ struct tipo_endereco {
   long int CEP;
 };
 
-struct ficha_pessoal {
+struct ficha_pessoa {
   char nome[50];
   long int telefone;
   struct tipo_endereco endereco;
 };
 
 int main(){
-  struct ficha_pessoal ficha;
+  struct ficha_pessoa ficha;
 
   strcpy(ficha.nome, "Luiz Osvaldo Silva");
   ficha.telefone = 4921234;
