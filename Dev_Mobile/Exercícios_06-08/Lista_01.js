@@ -12,7 +12,7 @@ function geraVetor(n = 10){
   let vetor = [];
   
   for (i = 0; i < n; i++){
-    console.log(`${i+1}º objeto:`);
+    console.log(`Objeto ${i+1}:`);
     let name = prompt('Nome: ');
     let age = prompt('Idade: ');
 
