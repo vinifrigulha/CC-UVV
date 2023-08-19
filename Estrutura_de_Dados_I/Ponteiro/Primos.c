@@ -3,10 +3,11 @@
 void parImpar(int v[], int size) {
   // Loop do array
   for (int i = 0; i < size; i++) {
-    // Loop divisores
+    // Verifica se o número é igual a 2
     if (v[i] == 2) {
       printf("\n%d é primo", v[i]);
     } else {
+      // Loop divisores
       for (int j = 2; j < v[i]; j++) {
         // Tenta achar divisores
         if (v[i] % j == 0) {
