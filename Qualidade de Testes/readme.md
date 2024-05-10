@@ -1,43 +1,51 @@
 # Plano de Teste
 
-<img src="https://newinstprod.me.com.br/images/mercado_eletronico_2-04-crop.png" width=300/>
+<img src="images/logo_me.png" width=300>
 
 ## 1 - Introdução
 
-Este documento descreve os requisitos a testar, os  tipos de testes definidos para cada iteração e os recursos de hardware e software a serem empregados no sistema do Mercado Eletrônico. As seções referentes aos requisitos e recursos servem para permitir o acompanhamento da evolução dos testes.
+Este documento descreve os requisitos a testar, os tipos de testes definidos para cada iteração e os recursos de hardware e software a serem empregados no sistema do Mercado Eletrônico.
 
-Com esse documento, você deve:
-- Identificar informações de projeto existentes e os componentes de software que devem ser testados.
-- Listar os Requisitos a testar.
-- Recomendar e descrever as estratégias de teste a serem empregadas.
+Com esse documento, você conseguirá:
+
+- Identificar informações de projeto existentes e os componentes de software que foram testados.
+- Visualizar a listagem dos Requisitos testados.
+- Extrair recomendações e estratégias de teste a serem empregadas para correção.
 - Identificar os recursos necessários e prover uma estimativa dos esforços de teste.
 - Listar os elementos resultantes do projeto de testes.
 
-## 2 - Requisitos a Testar
+## 2 - Sobre o Mercado Eletrônico
+
+O Mercado Eletrônico é uma empresa brasileira líder em soluções de comércio eletrônico B2B (business-to-business). Fundada em 1994, a empresa se destaca por oferecer uma plataforma robusta e abrangente para facilitar transações comerciais entre empresas.
+
+A missão do Mercado Eletrônico é simplificar e otimizar as compras corporativas por meio de tecnologia avançada. Eles oferecem uma variedade de serviços e soluções para ajudar empresas de todos os portes a melhorar seus processos de compras, desde a busca por fornecedores até a gestão de contratos e pagamentos.
+
+O Mercado Eletrônico tem sido reconhecido por sua inovação e compromisso em impulsionar a transformação digital no mercado B2B. Sua ampla experiência e presença no mercado brasileiro o tornam um parceiro confiável para empresas que buscam modernizar e aprimorar suas operações de compras e relacionamento com fornecedores.
+
+## 3 - Requisitos a Testar
 
 Esta seção contém os requisitos funcionais identificados como objetos dos testes ao longo do desenvolvimento do projeto.
 
 ### Requisitos funcionais:
 
-Requisito   | Descrição
-------------|--------------------
-REQ 1       | Carrinho de Compras
-REQ 2       | Tela de criar Requisições de Compra
+| Requisito | Descrição                  |
+| --------- | -------------------------- |
+| REQ 1     | Carrinho de Compras        |
+| REQ 2     | Personalizar Tela de Login |
 
-
-## 3 - Testes
+## 4 - Testes
 
 Esta seção é dedicada a apresentar os testes realizados em cada unidade do sistema do Mercado Eletrônico identificadas nos requisitos acima.
 
-### 3.1 - Quantidade de Itens no Carrinho de Compra (REQ 1)
+### 4.1 - Quantidade de Itens no Carrinho de Compra (REQ 1)
 
-Durante os testes realizados, ao se tentar digitar uma quantidade superior a 999.999.999, o sistema bloqueia novos dígitos e mantém esse valor de 9 dígitos.
+Durante os testes realizados, ao se tentar digitar uma quantidade com número de dígitos superior a 9, o sistema automaticamente converte a quantidade para 999.999.999 e bloqueia o acréscimo de novos dígitos, mantendo esse valor. Entretanto, ao navegar para a próxima tela, onde também é possível alterar a quantidade, foi observado o rompimento do limite do carrinho de compras.
 
 <br/>
 <table>
     <tr>
         <th>
-            Objetivo
+            Objetivo:
         </th>
         <th colspan="4">
             Verificar se há um limite de valor no carrinho de compras
@@ -48,15 +56,15 @@ Durante os testes realizados, ao se tentar digitar uma quantidade superior a 999
             Técnica:
         </th>
         <th colspan="2">
-            (x) manual
+            Manual (x) 
         </th>
         <th colspan="2">
-            ( ) automática
+            Automática ( ) 
         </th>
     </tr>
     <tr>
         <th>
-            Abordagem
+            Abordagem:
         </th>
         <th colspan="2">
             Caixa branca ( )
@@ -67,7 +75,7 @@ Durante os testes realizados, ao se tentar digitar uma quantidade superior a 999
     </tr>
     <tr>
         <th>
-            Estágio do teste
+            Estágio do teste:
         </th>
         <th>
             Integração ( )
@@ -84,7 +92,7 @@ Durante os testes realizados, ao se tentar digitar uma quantidade superior a 999
     </tr>
     <tr>
         <th>
-            Responsável
+            Responsável:
         </th>
         <th colspan="4">
             Vinícius Frigulha
@@ -93,20 +101,26 @@ Durante os testes realizados, ao se tentar digitar uma quantidade superior a 999
 </table>
 <br/>
 
-### 3.2 - Tela de criar Requisições de Compra (REQ 2)
+#### Evidências do teste do REQ 1:
 
-Para teste de integridade de dados e do banco de dados.
-Aqui deve-se verificar se os dados não se perdem ao desligar o programa. Se o programa consegue se recuperar em caso de falha ou fechamento repentino.
-Se possível usar teste automatizado.
+![Carrinho de compras com unidade de 9 dígitos](images/carrinho1.png)
+
+![Carrinho de compras com unidade de 10 dígitos](images/carrinho2.png)
+
+![Limite de quantidade é rompido em outra tela](images/carrinho3.png)
+
+### 4.2 - Personalizar Tela de Login (REQ 2)
+
+Durante os testes realizados, ao se clicar duas vezes no botão "Visualizar" na tela personalizar a tela de login, a barra superior de navegação desaparece, sendo necessário utilizar o botão de retorno do próprio navegador para retornar à tela anterior ou sair dessa tela de personalização.
 
 <br/>
 <table>
     <tr>
         <th>
-            Objetivo
+            Objetivo:
         </th>
         <th colspan="4">
-            Verificar se ao editar uma requisição de compra manterá a nova tela de criação
+            Verificar se manterá a barra superior de navegação
         </th>
     </tr>
     <tr>
@@ -114,15 +128,15 @@ Se possível usar teste automatizado.
             Técnica:
         </th>
         <th colspan="2">
-            (x) manual
+            Manual (x) 
         </th>
         <th colspan="2">
-            ( ) automática
+            Automática ( )
         </th>
     </tr>
     <tr>
         <th>
-            Estágio do teste
+            Estágio do teste:
         </th>
         <th>
             Integração ( )
@@ -139,7 +153,7 @@ Se possível usar teste automatizado.
     </tr>
     <tr>
         <th>
-            Abordagem do teste
+            Abordagem do teste:
         </th>
         <th colspan="2">
             Caixa branca ( )
@@ -150,7 +164,7 @@ Se possível usar teste automatizado.
     </tr>
     <tr>
         <th>
-            Responsável
+            Responsável:
         </th>
         <th colspan="4">
             Vinícius Frigulha
@@ -159,20 +173,76 @@ Se possível usar teste automatizado.
 </table>
 <br/>
 
-## 4 - Recursos
+#### Evidências do teste do REQ 2:
 
-Esta seção deve descrever os recursos humanos, de ambiente de teste (hardware e software) e de ferramentas de automatização de testes necessários para execução dos testes que devem ser descritos nas subseções que seguem.
+![Carrinho de compras com unidade de 9 dígitos](images/tela_login1.png)
 
-### 4.1 - Ambiente de teste - Software e Hardware
+![Carrinho de compras com unidade de 10 dígitos](images/tela_login2.png)
 
-Descreva aqui o hardware e sua configuração, e o software. Por exemplo, o sistema operacional, browsers, servidor web, etc.
-### 4.2 - Ferramenta de teste
+![Limite de quantidade é rompido em outra tela](images/tela_login3.png)
 
-Descreva aqui as ferramentas específicas de teste usadas no projeto.
+## 5 - Recursos
 
+Esta seção descreve os recursos de ambiente de teste (hardware e software) necessários para execução dos testes que serão descritos nas subseções que seguem.
 
-## 5 - Componentes
+### 5.1 - Hardware
 
-Aluno                      |       Professora          | Turma | Disciplina
----------------------------|---------------------------|-------|-------------------------------
-Vinícius Frigulha Ribeiro  | Gabriela Martins de Jesus | CC5N  | Qualidade e Testes de Software
+<table>
+    <tr>
+        <th>
+        Modelo do Notebook:
+        </th>
+        <th>
+        Dell Inspiron 15 5510
+        </th>
+    </tr>
+    <tr>
+        <th>
+        Processador:
+        </th>
+        <th>
+        Intel Core i5 11ª Geração 
+        </th>
+    </tr>
+    <tr>
+        <th>
+        Memória RAM:
+        </th>
+        <th>
+        16 GB 
+        </th>
+    </tr>
+</table>
+
+### 5.2 - Software
+
+<table>
+    <tr>
+        <th colspan="3">
+        Sistema Operacional:
+        </th>
+        <th colspan=3>
+        Windows 11 Pro 64-bit
+        </th>
+    </tr>
+    <tr>
+        <th colspan=3>
+        Navegador(es):
+        </th>
+        <th>
+        Google Chrome (x)
+        </th>
+        <th>
+        Microsoft Edge ( )
+        </th>
+        <th>
+        Mozilla Firefox ( )
+        </th>
+    </tr>
+</table>
+
+## 6 - Componentes
+
+| Aluno                     | Professora                | Turma | Disciplina                     |
+| ------------------------- | ------------------------- | ----- | ------------------------------ |
+| Vinícius Frigulha Ribeiro | Gabriela Martins de Jesus | CC5N  | Qualidade e Testes de Software |
