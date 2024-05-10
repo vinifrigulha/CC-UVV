@@ -95,7 +95,6 @@ Durante os testes realizados, ao se tentar digitar uma quantidade com número de
         </th>
     </tr>
 </table>
-<br/>
 
 #### **Observação geral:**
 
@@ -171,7 +170,6 @@ Durante os testes realizados, ao se clicar duas vezes no botão "Visualizar" na 
         </th>
     </tr>
 </table>
-<br/>
 
 #### **Observação geral:**
 
@@ -240,7 +238,7 @@ Esta seção descreve os recursos de ambiente de teste (hardware e software) nec
         Microsoft Edge (x)
         </th>
         <th>
-        Mozilla Firefox (x) 
+        Mozilla Firefox (x)
         </th>
     </tr>
 </table>
