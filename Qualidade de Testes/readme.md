@@ -10,8 +10,6 @@ Com esse documento, você conseguirá:
 
 - Identificar informações de projeto existentes e os componentes de software que foram testados.
 - Visualizar a listagem dos Requisitos testados.
-- Extrair recomendações e estratégias de teste a serem empregadas para correção.
-- Identificar os recursos necessários e prover uma estimativa dos esforços de teste.
 - Listar os elementos resultantes do projeto de testes.
 
 ## 2 - Sobre o Mercado Eletrônico
@@ -22,20 +20,18 @@ A missão do Mercado Eletrônico é simplificar e otimizar as compras corporativ
 
 O Mercado Eletrônico tem sido reconhecido por sua inovação e compromisso em impulsionar a transformação digital no mercado B2B. Sua ampla experiência e presença no mercado brasileiro o tornam um parceiro confiável para empresas que buscam modernizar e aprimorar suas operações de compras e relacionamento com fornecedores.
 
-## 3 - Requisitos a Testar
+## 3 - Requisitos de Teste
 
-Esta seção contém os requisitos funcionais identificados como objetos dos testes ao longo do desenvolvimento do projeto.
-
-### Requisitos funcionais:
+Esta seção contém os requisitos identificados como objetos dos testes ao longo do desenvolvimento do projeto.
 
 | Requisito | Descrição                  |
 | --------- | -------------------------- |
 | REQ 1     | Carrinho de Compras        |
 | REQ 2     | Personalizar Tela de Login |
 
-## 4 - Testes
+## 4 - Critérios de Testes
 
-Esta seção é dedicada a apresentar os testes realizados em cada unidade do sistema do Mercado Eletrônico identificadas nos requisitos acima.
+Esta seção é dedicada a apresentar os critérios de testes realizados em cada unidade do sistema do Mercado Eletrônico identificadas nos requisitos acima.
 
 ### 4.1 - Quantidade de Itens no Carrinho de Compra (REQ 1)
 
@@ -100,6 +96,10 @@ Durante os testes realizados, ao se tentar digitar uma quantidade com número de
     </tr>
 </table>
 <br/>
+
+#### **Observação geral:**
+
+_Ambiente de Teste:_ Os testes foram realizados em um ambiente de teste dedicado que replica as condições do ambiente de produção.
 
 #### Evidências do teste do REQ 1:
 
@@ -173,6 +173,10 @@ Durante os testes realizados, ao se clicar duas vezes no botão "Visualizar" na 
 </table>
 <br/>
 
+#### **Observação geral:**
+
+_Ambiente de Teste:_ Os testes foram realizados em um ambiente de teste dedicado que replica as condições do ambiente de produção.
+
 #### Evidências do teste do REQ 2:
 
 ![Carrinho de compras com unidade de 9 dígitos](images/tela_login1.png)
@@ -233,10 +237,10 @@ Esta seção descreve os recursos de ambiente de teste (hardware e software) nec
         Google Chrome (x)
         </th>
         <th>
-        Microsoft Edge ( )
+        Microsoft Edge (x)
         </th>
         <th>
-        Mozilla Firefox ( )
+        Mozilla Firefox (x)
         </th>
     </tr>
 </table>
