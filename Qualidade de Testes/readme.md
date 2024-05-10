@@ -95,19 +95,10 @@ Durante os testes realizados, ao se tentar digitar uma quantidade com número de
         </th>
     </tr>
 </table>
-<br/>
 
 #### **Observação geral:**
 
 _Ambiente de Teste:_ Os testes foram realizados em um ambiente de teste dedicado que replica as condições do ambiente de produção.
-
-#### Evidências do teste do REQ-1:
-
-![Carrinho de compras com unidade de 9 dígitos](images/carrinho1.png)
-
-![Carrinho de compras com unidade de 10 dígitos](images/carrinho2.png)
-
-![Limite de quantidade é rompido em outra tela](images/carrinho3.png)
 
 ### 4.2 - Personalizar Tela de Login (REQ-2)
 
@@ -176,14 +167,6 @@ Durante os testes realizados, ao se clicar duas vezes no botão "Visualizar" na 
 
 _Ambiente de Teste:_ Os testes foram realizados em um ambiente de teste dedicado que replica as condições do ambiente de produção.
 
-#### Evidências do teste do REQ-2:
-
-![Carrinho de compras com unidade de 9 dígitos](images/tela_login1.png)
-
-![Carrinho de compras com unidade de 10 dígitos](images/tela_login2.png)
-
-![Limite de quantidade é rompido em outra tela](images/tela_login3.png)
-
 ## 5 - Recursos
 
 Esta seção descreve os recursos de ambiente de teste (hardware e software) necessários para execução dos testes que serão descritos nas subseções que seguem.
@@ -244,56 +227,7 @@ Esta seção descreve os recursos de ambiente de teste (hardware e software) nec
     </tr>
 </table>
 
-## 6 - Níveis de Criticidades de Defeito:
-
-Os níveis de gravidade de incidentes são uma medição do impacto que eles têm nos negócios. Em geral, quanto menor o número de gravidade, maior é o impacto do incidente. Eles são úteis para compreender o impacto com rapidez e definir prioridades para as equipes de TI e DevOps.
-
-Quanto mais bem definidos forem os níveis de gravidade, maior vai ser a probabilidade de que a equipe esteja em sincronia e possa ter uma reação rápida e adequada quando os incidentes acontecerem. Sem níveis de gravidade bem definidos, é fácil perder tempo vital definindo e explicando a urgência de um incidente, quando poderia estar resolvendo o incidente.
-
-<table>
-    <tr>
-        <th>
-        GRAV-1
-        </th>
-        <th>
-        Um incidente crítico com impacto muito alto.
-        </th>
-    </tr>
-    <tr>
-        <th>
-        GRAV-2
-        </th>
-        <th>
-        Um incidente grave com impacto significativo.
-        </th>
-    </tr>
-    <tr>
-        <th>
-        GRAV-3
-        </th>
-        <th>
-        Um incidente com o potencial de se tornar um incidente grave se não for resolvido logo.
-        </th>
-    </tr>
-    <tr>
-        <th>
-        GRAV-4
-        </th>
-        <th>
-        Uma solicitação de suporte que é irritante para o cliente, mas não afeta a função geral do sistema.
-        </th>
-    </tr>
-    <tr>
-        <th>
-        GRAV-5
-        </th>
-        <th>
-        Bugs ou problemas de suporte que não afetam a usabilidade do produto.
-        </th>
-    </tr>
-</table>
-
-Referência **[aqui](https://www.atlassian.com/br/incident-management/kpis/severity-levels)**
+## 6 - Níveis de Criticidades de Defeito
 
 Dentro dos requisitos levantados anteriormente, temos as seguintes análises:
 
@@ -303,7 +237,7 @@ Dentro dos requisitos levantados anteriormente, temos as seguintes análises:
 | Embora exija um cenário extremo, é importante para alguns clientes saberem o limite de unidades que eles podem adicionar ao carrinho de compras, ainda que eles possam alterar a quantidade na tela seguinte                                                           | Como é uma ferramenta utilizada mais na visão do administrador ou técnico e vai ser pouco utilizada, seu grau de criticidade é baixíssimo, mas não deixa de ser um ponto a melhorar                                                                                                                                                                                                   |
 | Para grandes empresas de e-commerce como a Amazon, Shopee e outros, ter um limite de compra no carrinho de compras pode ser bastante crítico e ter impactos significativos nas operações e na experiência do cliente. Então seria algo entre os níveis GRAV-1 e GRAV-2 | Se a barra superior do LinkedIn desaparecesse em determinadas funcionalidades do site, impedindo o usuário de retornar à tela anterior ou acessar outras partes do portal, isso teria um impacto significativo na experiência do usuário e na funcionalidade do site. A falta da barra superior no LinkedIn em determinadas funcionalidades seria classificada com uma nota de GRAV-2 |
 
-## 7 - SLA de Resolução:
+## 7 - SLA de Resolução
 
 ### SLA para o REQ-1:
 
@@ -331,40 +265,61 @@ Dentro dos requisitos levantados anteriormente, temos as seguintes análises:
 
 ## 8 - Template de Reporte de Defeito
 
-[Mercado Eletrônico] - Limite do Carrinho de Compras deveria ser maior
+### 8.1 - Reporte do REQ-1:
 
-Data de Identificação: [Insira a data de identificação do defeito]
-Identificador do Defeito: [Insira um número ou código de identificação]
-Descrição do Defeito: [Descreva o defeito de forma sucinta]
-Detalhes do Sistema/Software
+- *Data de Identificação:* 09/05/2024
+- *Descrição do Defeito:* Limite do Carrinho de Compras deveria ser maior
+- *Nome do Sistema/Software:* Mercado Eletrônico
+- *Ambiente:* STG (Testes)
 
-Nome do Sistema/Software: [Insira o nome do sistema ou software afetado]
-Versão: [Especifique a versão relevante, se aplicável]
-Ambiente: [Descreva o ambiente onde o defeito foi identificado, por exemplo, produção, teste, desenvolvimento]
-Passos para Reproduzir o Defeito
+- *Passos para Reproduzir o Defeito:*
 
-[Descreva o primeiro passo para reproduzir o defeito]
-[Descreva o segundo passo, se necessário]
-[Continue com os passos adicionais conforme necessário]
-Comportamento Esperado
+1º Acessar o portal pelo Backoffice e substituir pelo usuário AA_ADM_TESTE;
+2º Acessar a tela "Transações" e clicar em "+ Requisição Normal";
+3º Selecionar um item e clicar em "Adicionar ao Carrinho";
+4º Abra o carrinho e digite uma quantidade de 9 dígitos qualquer;
+5º Agora, digite um décimo dígito;
+**Resultado:** O portal mudará a quantidade automaticamente para 999.999.999.
 
-[Descreva como o sistema/software deveria se comportar sem o defeito]
+- *Comportamento Esperado:*
+A quantidade digitada deveria ser mantida e não alterada para uma limite.
 
-Comportamento Atual
+- *Evidências do teste do REQ-1:*
 
-[Descreva o comportamento atual do sistema/software devido ao defeito]
+![Carrinho de compras com unidade de 9 dígitos](images/carrinho1.png)
 
-Impacto do Defeito
+![Carrinho de compras com unidade de 10 dígitos](images/carrinho2.png)
 
-[Explique o impacto que este defeito está causando, por exemplo, funcionalidade comprometida, erro crítico, impacto nos usuários]
+![Limite de quantidade é rompido em outra tela](images/carrinho3.png)
 
-Anexos
+### 8.2 - Reporte do REQ-2:
 
-[Se houver, liste quaisquer arquivos, capturas de tela ou logs relevantes para ajudar na compreensão ou reprodução do defeito]
+- *Data de Identificação:* 09/05/2024
+- *Descrição do Defeito:* Verificar se manterá a barra superior de navegação
+- *Nome do Sistema/Software:* Mercado Eletrônico
+- *Ambiente:* STG (Testes)
 
-Outras Observações
+- *Passos para Reproduzir o Defeito:*
 
-[Inclua quaisquer observações adicionais relevantes]
+1º Acessar o portal pelo Backoffice e substituir pelo usuário AA_ADM_TESTE;
+2º Clicar em "... Mais", digitar "Personalizar Tela de Login" e clicar nessa opção;
+3º Adicione qualquer imagem em "Imagem de Fundo" e em "Logo";
+4º Clique em "Visualizar";
+5º Repita os passos 3 e 4;
+**Resultado:** Na segunda vez ao clicar no botão "Visualizar", a barra superior desaparece, impedindo o usuário de navegar pelo portal.
+
+- *Comportamento Esperado:*
+A barra superior não deveria desaparecer.
+
+- *Evidências do teste do REQ-2:*
+
+![Barra superior é mantida](images/tela_login1.png)
+
+![Barra superior ainda é mantida](images/tela_login2.png)
+
+![Barra superior desaparece](images/tela_login3.png)
+
+
 
 ## 9 - Componentes
 
