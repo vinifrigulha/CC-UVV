@@ -240,7 +240,7 @@ Esta seção descreve os recursos de ambiente de teste (hardware e software) nec
         Microsoft Edge (x)
         </th>
         <th>
-        Mozilla Firefox (x)
+        Mozilla Firefox (x) 
         </th>
     </tr>
 </table>
