@@ -326,3 +326,7 @@ A barra superior não deveria desaparecer.
 | Aluno                     | Professora                | Turma | Disciplina                     |
 | ------------------------- | ------------------------- | ----- | ------------------------------ |
 | Vinícius Frigulha Ribeiro | Gabriela Martins de Jesus | CC5N  | Qualidade e Testes de Software |
+
+## 10 - Link do GitHub
+
+[Plano de Testes](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/readme.md)
