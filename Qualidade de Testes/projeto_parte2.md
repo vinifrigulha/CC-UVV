@@ -41,7 +41,7 @@
 
  - **Cenário de Teste 03: Tamanho da imagem**
   - CT 01: [Enviar imagens de 8,53MB], [Dimensão aceita]
-  - **OBS:** Não foram encontrados exemplos os suficiente para realizar os testes, mas para tamanhos usuais o sistema se mostrou capaz de suportá-las.
+- **OBS:** Não foram encontrados exemplos os suficiente para realizar os testes, mas para tamanhos usuais o sistema se mostrou capaz de suportá-las.
 
 
 # 2 - Requisitos Não Funcionais (RNF):
