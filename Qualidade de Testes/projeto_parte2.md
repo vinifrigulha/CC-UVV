@@ -22,6 +22,21 @@
   - CT 05: [Digitar uma quantidade válida e apertar um dos botões], [É adicionada/subtraída de 1 em 1 a partir da quantidade digitada]
 
 ## RF002 - Personalizar Tela de Login
+- **Cenário de Teste 01 - Formatos de imagem**
+  - CT 01: [Formato PNG], [Formato aceito]
+  - CT 02: [Formato JPG], [Formato aceito]
+  - CT 03: [Formato GIF], [Formato aceito]
+  - CT 04: [Formato SVG], [Formato não aceito]
+  - CT 05: [Formato WEBP], [Formato não aceito]
+  - CT 06: [Formato PDF], [Formato não aceito]
+
+- **Cenário de Teste 02 - Tamanhos de imagem**
+  - CT 01: [Formato PNG], [Formato aceito]
+  - CT 02: [Formato JPG], [Formato aceito]
+  - CT 03: [Formato GIF], [Formato aceito]
+  - CT 04: [Formato SVG], [Formato não aceito]
+  - CT 05: [Formato WEBP], [Formato não aceito]
+  - CT 06: [Formato PDF], [Formato não aceito]
 
 
 # Requisitos Não Funcionais (RNF):
