@@ -25,23 +25,23 @@
 
 ## RF002: Personalizar Tela de Login
 - **Cenário de Teste 01: Formatos de imagem**
-  - CT 01: [Formato PNG], [Formato aceito]
-  - CT 02: [Formato JPG], [Formato aceito]
-  - CT 03: [Formato GIF], [Formato aceito]
-  - CT 04: [Formato SVG], [Erro: Formato não aceito]
-  - CT 05: [Formato WEBP], [Erro: Formato não aceito]
-  - CT 06: [Formatos de texto como PDF, DOCX, XLSX, PPTX, etc.], [Erro: Formatos não aceitos]
-  - CT 07: [Formatos de vídeo como MP4, MOV, WMV, etc.], [Erro: Formatos não aceitos]
-  - CT 08: [Formatos de áudio como MP3, WMA, WAV, etc.], [Erro: Formatos não aceitos]
+  - CT 01: [Enviar imagem no formato PNG], [Formato aceito]
+  - CT 02: [Enviar imagem no formato JPG], [Formato aceito]
+  - CT 03: [Enviar imagem no formato GIF], [Formato aceito]
+  - CT 04: [Enviar imagem no formato SVG], [Erro: Formato não aceito]
+  - CT 05: [Enviar imagem no formato WEBP], [Erro: Formato não aceito]
+  - CT 06: [Enviar formatos de texto como PDF, DOCX, XLSX, PPTX, etc.], [Erro: Formatos não aceitos]
+  - CT 07: [Enviar formatos de vídeo como MP4, MOV, WMV, etc.], [Erro: Formatos não aceitos]
+  - CT 08: [Enviar formatos de áudio como MP3, WMA, WAV, etc.], [Erro: Formatos não aceitos]
 
 - **Cenário de Teste 02: Dimensão da imagem**
-  - CT 01: [Enviar imagens com dimensões entre 1x1 e 9.000x9.000], [Dimensões aceita]
+  - CT 01: [Enviar imagens com dimensões entre 1x1 e 9.000x9.000], [Dimensões aceitas]
   - **OBS<sub>1</sub>:** Não foram encontrados exemplos os suficiente para realizar os testes, mas para dimensões usuais o sistema se mostrou capaz de suportá-las.
-  - **OBS<sub>2</sub>:** Algumas dimensões por não serem no padrão da tela do navegador acabaram desformatando as imagens.
+  - **OBS<sub>2</sub>:** Algumas dimensões por não serem no padrão da tela do navegador acabaram deformatando as imagens.
 
  - **Cenário de Teste 03: Tamanho da imagem**
-  - CT 01: [O sistema suportou dimensões desde 1x1 até 9.000x9.000], [Dimensão aceita]
-  - **OBS:** Não foram encontrados exemplos os suficiente para realizar os testes, mas para dimensões usuais o sistema se mostrou capaz de suportá-las.
+  - CT 01: [Enviar imagens de 8,53MB], [Dimensão aceita]
+  - **OBS:** Não foram encontrados exemplos os suficiente para realizar os testes, mas para tamanhos usuais o sistema se mostrou capaz de suportá-las.
 
 
 # 2 - Requisitos Não Funcionais (RNF):
