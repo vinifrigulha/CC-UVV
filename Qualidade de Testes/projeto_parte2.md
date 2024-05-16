@@ -28,15 +28,13 @@
   - CT 03: [Formato GIF], [Formato aceito]
   - CT 04: [Formato SVG], [Formato não aceito]
   - CT 05: [Formato WEBP], [Formato não aceito]
-  - CT 06: [Formato PDF], [Formato não aceito]
+  - CT 06: [Formatos de texto como PDF, DOCX, XLSX, PPTX, etc.], [Formatos não aceitos]
+  - CT 07: [Formatos de vídeo como MP4, MOV, WMV, etc.], [Formatos não aceitos]
+  - CT 08: [Formatos de áudio como MP3, WMA, WAV, etc.], [Formatos não aceitos]
 
 - **Cenário de Teste 02 - Tamanhos de imagem**
-  - CT 01: [Formato PNG], [Formato aceito]
-  - CT 02: [Formato JPG], [Formato aceito]
-  - CT 03: [Formato GIF], [Formato aceito]
-  - CT 04: [Formato SVG], [Formato não aceito]
-  - CT 05: [Formato WEBP], [Formato não aceito]
-  - CT 06: [Formato PDF], [Formato não aceito]
+  - CT 01: [O sistema suportou todos os tamanhos, desde 1x1 até 9.000x9.000], [Tamanho aceito]
+  - **OBS: Não foram encontrados exemplos os suficiente para realizar este teste** 
 
 
 # Requisitos Não Funcionais (RNF):
