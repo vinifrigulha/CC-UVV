@@ -39,7 +39,7 @@
   - **OBS<sub>1</sub>:** Não foram encontrados exemplos os suficiente para realizar os testes, mas para dimensões usuais o sistema se mostrou capaz de suportá-las.
   - **OBS<sub>2</sub>:** Algumas dimensões por não serem no padrão da tela do navegador acabaram deformatando as imagens.
 
- - **Cenário de Teste 03: Tamanho da imagem**
+- **Cenário de Teste 03: Tamanho da imagem**
   - CT 01: [Enviar imagens de 8,53MB], [Dimensão aceita]
   - **OBS:** Não foram encontrados exemplos os suficiente para realizar os testes, mas para tamanhos usuais o sistema se mostrou capaz de suportá-las.
 
