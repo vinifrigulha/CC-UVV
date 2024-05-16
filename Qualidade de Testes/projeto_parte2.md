@@ -66,4 +66,4 @@
 
 ## 4 - Link do GitHub
 
-[Projeto de Testes](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/readme.md)
+[Projeto de Testes](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/projeto_parte2.md)
