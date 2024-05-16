@@ -64,11 +64,19 @@
 
 
 ## RNF002: Integração
-- **Cenário de Teste 01: Integração via SOAP**
-  - CT 01: [Números entre 1 e 999.999.999, incluindo-os], [Quantidade aceita]
-
-- **Cenário de Teste 02: Integração via JSON**
-  - CT 01: [Números entre 1 e 999.999.999, incluindo-os], [Quantidade aceita]
+- **Cenário de Teste 01: Integração via SOAP/API Rest (SoapUI/Postman)**
+  - CT 01: [Usuário e senha de integração corretos], [Código 200 (OK)]
+  - CT 02: [Usuário correto e senha em branco], [Erro: Código 401 (Unauthorized)]
+  - CT 03: [Usuário em branco e senha correta], [Erro: Código 401 (Unauthorized)]
+  - CT 04: [Nenhuma credencial preenchida], [Erro: Código 401 (Unauthorized)]
+  - CT 05: [Não enviar a tag de integração], [No SoapUI dá código 200 (OK), porém a integração não é feita na plataforma]
+    - Resposta da plataforma: "Não existe ID relacionado à TAG:"
+  - CT 06: [Enviar um valor não válido na tag de integração], [No SoapUI dá código 200 (OK), porém a integração não é feita na plataforma]
+    - Resposta da plataforma: "Não existe ID relacionado à TAG: TESTE"
+  - CT 07: [Não enviar uma tag obrigatória], [No SoapUI dá código 200 (OK), porém a integração não é feita na plataforma]
+    - Resposta da plataforma: "Erro na entrada de requisição 0: Numero da requisicao cliente não informado."
+  - CT 08: [Enviar uma tag incorreta], [Erro: Código 400 (Bad Request)]
+  - CT 09: [Enviar uma tag que não existe], [A integração é feita com sucesso (Código 200), logo a plataforma apenas ignorou a tag inexistente]
 
 
 # 3 - Componentes:
