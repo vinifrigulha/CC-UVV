@@ -34,9 +34,14 @@
   - CT 07: [Formatos de vídeo como MP4, MOV, WMV, etc.], [Erro: Formatos não aceitos]
   - CT 08: [Formatos de áudio como MP3, WMA, WAV, etc.], [Erro: Formatos não aceitos]
 
-- **Cenário de Teste 02: Tamanhos de imagem**
-  - CT 01: [O sistema suportou todos os tamanhos, desde 1x1 até 9.000x9.000], [Tamanho aceito]
-  - **OBS: Não foram encontrados exemplos os suficiente para realizar os testes, mas para tamanhos usuais o sistema se mostrou capaz de suportá-los.** 
+- **Cenário de Teste 02: Dimensão da imagem**
+  - CT 01: [Enviar imagens com dimensões entre 1x1 e 9.000x9.000], [Dimensões aceita]
+  - **OBS<sub>1</sub>:** Não foram encontrados exemplos os suficiente para realizar os testes, mas para dimensões usuais o sistema se mostrou capaz de suportá-las.
+  - **OBS<sub>2</sub>:** Algumas dimensões por não serem no padrão da tela do navegador acabaram desformatando as imagens.
+
+ - **Cenário de Teste 03: Tamanho da imagem**
+  - CT 01: [O sistema suportou dimensões desde 1x1 até 9.000x9.000], [Dimensão aceita]
+  - **OBS:** Não foram encontrados exemplos os suficiente para realizar os testes, mas para dimensões usuais o sistema se mostrou capaz de suportá-las.
 
 
 # 2 - Requisitos Não Funcionais (RNF):
@@ -48,7 +53,7 @@
   - CT 03: [Acessar o portal via Mozilla Firefox], [Acesso feito com sucesso]
   - CT 04: [Acessar o portal via Safari], [Acesso feito com sucesso]
   - CT 05: [Acessar o portal via Opera GX], [Acesso feito com sucesso]
-  - **OBS: Não foi realizado em todos os navegadores existente, mas os citados acima são os mais comuns e funcionaram.**
+  - **OBS:** Não foi realizado em todos os navegadores existentes, mas os citados acima são os mais comuns e funcionaram.
 
 - **Cenário de Teste 02: Uso de diferentes guias**
   - CT 01: [Abrir uma tela interna em uma nova guia], [Mantém o login atual]
@@ -59,24 +64,33 @@
 
 - **Cenário de Teste 03: Navegadores distintos**
   - CT 01: [Fazer login em navegadores distintos], [Mantém duas contas logadas nos diferentes navegadores]
-  - CT 04: [Abrir outro cliente em um navegador diferente], [A sessão anterior no outro navegador não é atrapalhada]
-  - CT 05: [Abrir o mesmo cliente ou outro cliente em uma guia anônima], [Não interrompe nem atrapalha a navegação no outro navagador]
+  - CT 02: [Abrir outro cliente em um navegador diferente], [A sessão anterior no outro navegador não é atrapalhada]
+  - CT 03: [Abrir o mesmo cliente ou outro cliente em uma guia anônima], [Não interrompe nem atrapalha a navegação no outro navagador]
 
 
 ## RNF002: Integração
-- **Cenário de Teste 01: Integração via SOAP/API Rest (SoapUI/Postman)**
-  - CT 01: [Usuário e senha de integração corretos], [Código 200 (OK)]
-  - CT 02: [Usuário correto e senha em branco], [Erro: Código 401 (Unauthorized)]
-  - CT 03: [Usuário em branco e senha correta], [Erro: Código 401 (Unauthorized)]
-  - CT 04: [Nenhuma credencial preenchida], [Erro: Código 401 (Unauthorized)]
+- **Cenário de Teste 01: Integração via SOAP/API Rest (SoapUI/Postman) - externo à plataforma**
+  - CT 01: [Enviar usuário e senha de integração corretos], [Código 200 (OK)]
+  - CT 02: [Enviar usuário correto e senha em branco], [Erro: Código 401 (Unauthorized)]
+  - CT 03: [Enviar usuário em branco e senha correta], [Erro: Código 401 (Unauthorized)]
+  - CT 04: [Não preencher nenhuma credencial], [Erro: Código 401 (Unauthorized)]
   - CT 05: [Não enviar a tag de integração], [No SoapUI dá código 200 (OK), porém a integração não é feita na plataforma]
-    - Resposta da plataforma: "Não existe ID relacionado à TAG:"
+    - **Resposta da plataforma:** "Não existe ID relacionado à TAG:"
   - CT 06: [Enviar um valor não válido na tag de integração], [No SoapUI dá código 200 (OK), porém a integração não é feita na plataforma]
-    - Resposta da plataforma: "Não existe ID relacionado à TAG: TESTE"
-  - CT 07: [Não enviar uma tag obrigatória], [No SoapUI dá código 200 (OK), porém a integração não é feita na plataforma]
-    - Resposta da plataforma: "Erro na entrada de requisição 0: Numero da requisicao cliente não informado."
+    - **Resposta da plataforma:** "Não existe ID relacionado à TAG: TESTE"
+  - CT 07: [Não enviar uma tag obrigatória (Ex.: REQUISICAOCLIENTE)], [No SoapUI dá código 200 (OK), porém a integração não é feita na plataforma]
+    - **Resposta da plataforma:** "Erro na entrada de requisição 0: Numero da requisicao cliente não informado."
   - CT 08: [Enviar uma tag incorreta], [Erro: Código 400 (Bad Request)]
   - CT 09: [Enviar uma tag que não existe], [A integração é feita com sucesso (Código 200), logo a plataforma apenas ignorou a tag inexistente]
+
+- **Cenário de Teste 02: Integração via Planilhas do Excel (Cargas) - interno à plataforma**
+  - CT 01: [Enviar todas as colunas e abas com os devidos nomes e valores válidos e aceitos], [Status Processado]
+    - **OBS:** A plataforma utiliza a terminologia *"Processado"* para indicar sucesso no envio da carga.
+  - CT 02: [Enviar com dados inválidos], [Erro: Status Erro]
+  - CT 03: [Enviar sem abas obrigatórias], [Erro: Status Erro]
+  - CT 04: [Enviar sem colunas obrigatórias], [Erro: Status Erro]
+  - CT 05: [Enviar tipo de dado incorretos em determinadas colunas], [Erro: Status Erro]
+  - CT 06:
 
 
 # 3 - Componentes:
