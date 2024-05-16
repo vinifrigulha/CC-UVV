@@ -41,7 +41,7 @@
 
  - **Cenário de Teste 03: Tamanho da imagem**
   - CT 01: [Enviar imagens de 8,53MB], [Dimensão aceita]
-- **OBS:** Não foram encontrados exemplos os suficiente para realizar os testes, mas para tamanhos usuais o sistema se mostrou capaz de suportá-las.
+  - **OBS:** Não foram encontrados exemplos os suficiente para realizar os testes, mas para tamanhos usuais o sistema se mostrou capaz de suportá-las.
 
 
 # 2 - Requisitos Não Funcionais (RNF):
@@ -90,7 +90,7 @@
   - CT 03: [Enviar sem abas obrigatórias], [Erro: Status Erro]
   - CT 04: [Enviar sem colunas obrigatórias], [Erro: Status Erro]
   - CT 05: [Enviar tipo de dado incorretos em determinadas colunas], [Erro: Status Erro]
-  - CT 06:
+  - CT 06: [Enviar coluna inexistente], [Erro: Status Erro]
 
 
 # 3 - Componentes:
