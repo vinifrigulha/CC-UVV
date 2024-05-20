@@ -233,8 +233,6 @@ Esta seção descreve os recursos de ambiente de teste (hardware e software) nec
 
 ## 7 - SLA de Resolução
 
-### SLA para o REQ-1:
-
 1. **Tempo de Resolução:** 1 mês.
 
 2. **Prioridade do Incidente:** Baixa.
