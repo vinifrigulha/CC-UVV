@@ -63,10 +63,10 @@ Durante os testes realizados, ao se tentar digitar uma quantidade com número de
             Técnica:
         </th>
         <th colspan="2">
-            Caixa branca ( )
+            Teste Estrutural ( )
         </th>
         <th colspan="2">
-            Caixa preta (x)
+            Teste Funcional (x)
         </th>
     </tr>
     <tr>
@@ -127,10 +127,10 @@ Durante os testes realizados, ao se clicar duas vezes no botão "Visualizar" na 
             Técnica:
         </th>
         <th colspan="2">
-            Caixa branca ( )
+            Teste Estrutural ( )
         </th>
         <th colspan="2">
-            Caixa preta (x)
+            Teste Funcional (x)
         </th>
     </tr>
     <tr>
@@ -223,12 +223,13 @@ Esta seção descreve os recursos de ambiente de teste (hardware e software) nec
 
 ## 6 - Níveis de Criticidades de Defeito
 
-Dentro dos requisitos levantados anteriormente, temos as seguintes análises:
-
-| REQ-1 | REQ-2 |
-| ----- | ----- |
-| _GRAV-4 - Um incidente leve que afeta a usabilidade do produto, mas não o interrompe._ | _GRAV-5 - Bugs ou problemas de suporte que não afetam a usabilidade do produto._ |
-| Embora exija um cenário extremo, é importante para alguns clientes saberem o limite de unidades que eles podem adicionar ao carrinho de compras, ainda que eles possam alterar a quantidade na tela seguinte. | Como é uma ferramenta utilizada mais na visão do administrador ou técnico e vai ser pouco utilizada, seu grau de criticidade é baixíssimo, mas não deixa de ser um ponto a melhorar. |
+| Nível de Criticidade de Defeito |                 Descrição                     |
+| :-----------------------------: | :-------------------------------------------- |
+| GRAV-1 | Um incidente crítico com impacto muito alto.  |
+| GRAV-2 | Um incidente grave com impacto significativo. |
+| GRAV-3 | Um incidente com o potencial de se tornar um incidente grave se não for resolvido logo. |
+| GRAV-4 | Um incidente leve que afeta a usabilidade do produto, mas não o interrompe. |
+| GRAV-5 | Bugs ou problemas de suporte que não afetam a usabilidade do produto. |
 
 ## 7 - SLA de Resolução
 
