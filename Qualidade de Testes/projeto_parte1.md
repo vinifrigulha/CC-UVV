@@ -271,8 +271,6 @@ A quantidade digitada deveria ser mantida e não alterada para uma limite.
 
 ![Carrinho de compras com unidade de 10 dígitos](images/carrinho2.png)
 
-![Limite de quantidade é rompido em outra tela](images/carrinho3.png)
-
 ### 8.2 - Reporte do REQ-2:
 
 - *Data de Identificação:* 09/05/2024
