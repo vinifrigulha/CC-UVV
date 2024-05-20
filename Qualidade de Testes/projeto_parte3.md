@@ -36,10 +36,11 @@ A quantidade digitada deveria ser mantida e não alterada para uma limite.
 
 1. Acessar o portal pelo Backoffice e substituir pelo usuário AA_ADM_TESTE;
 2. Clicar em "... Mais", digitar "Personalizar Tela de Login" e clicar nessa opção;
-3. Adicione qualquer imagem em "Imagem de Fundo" e em "Logo";
-4. Clique em "Visualizar";
-5. Repita os passos 3 e 4;
-6. **Resultado:** Na segunda vez ao clicar no botão "Visualizar", a barra superior desaparece, impedindo o usuário de navegar pelo portal.
+3. Adicione no campo "Logo" a imagem [Logo UVV](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/logo_uvv.png);
+4. Adicione no campo "Imagem de Fundo" a imagem [Imagem de Fundo](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/wallpaper_uvv.png);
+5. Clique em "Visualizar";
+6. Repita os passos 3 e 4;
+7. **Resultado:** Na segunda vez ao clicar no botão "Visualizar", a barra superior desaparece, impedindo o usuário de navegar pelo portal.
 
 - *Comportamento Esperado:*
 A barra superior não deveria desaparecer.
