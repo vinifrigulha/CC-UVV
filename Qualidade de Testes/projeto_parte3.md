@@ -11,9 +11,9 @@
 
 1. Acessar o portal pelo Backoffice e substituir pelo usuário AA_ADM_TESTE;
 2. Acessar a tela "Transações" e clicar em "+ Requisição Normal";
-3. Selecionar um item e clicar em "Adicionar ao Carrinho";
-4. Abra o carrinho e digite uma quantidade de 9 dígitos qualquer;
-5. Agora, digite um décimo dígito;
+3. Selecionar o item "ROTULO F50 DI 0W20 1L(F)" e clicar em "Adicionar ao Carrinho";
+4. Abra o carrinho e digite 111.111.111;
+5. Agora, digite outro dígito "1";
 6. **Resultado:** O portal mudará a quantidade automaticamente para 999.999.999.
 
 - *Comportamento Esperado:*
