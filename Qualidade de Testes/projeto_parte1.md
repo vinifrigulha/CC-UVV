@@ -82,9 +82,6 @@ Durante os testes realizados, ao se tentar digitar uma quantidade com número de
         <th>
             Unidade (x)
         </th>
-        <th>
-            Aceitação ( )
-        </th>
     </tr>
     <tr>
         <th>
@@ -148,9 +145,6 @@ Durante os testes realizados, ao se clicar duas vezes no botão "Visualizar" na 
         </th>
         <th>
             Unidade (x)
-        </th>
-        <th>
-            Aceitação ( )
         </th>
     </tr>
     <tr>
@@ -231,24 +225,23 @@ Esta seção descreve os recursos de ambiente de teste (hardware e software) nec
 
 Dentro dos requisitos levantados anteriormente, temos as seguintes análises:
 
-| REQ-1                                                                                                                                                                                                                                                                  | REQ-2                                                                                                                                                                                                                                                                                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| _GRAV-4_ - Um incidente leve que afeta a usabilidade do produto, mas não o interrompe.                                                                                                                                                                                                                                                               | _GRAV-5_ - Bugs ou problemas de suporte que não afetam a usabilidade do produto.                                                                                                                                                                                                                                                                                                                                                                             |
-| Embora exija um cenário extremo, é importante para alguns clientes saberem o limite de unidades que eles podem adicionar ao carrinho de compras, ainda que eles possam alterar a quantidade na tela seguinte                                                           | Como é uma ferramenta utilizada mais na visão do administrador ou técnico e vai ser pouco utilizada, seu grau de criticidade é baixíssimo, mas não deixa de ser um ponto a melhorar                                                                                                                                                                                                   |
+| REQ-1 | REQ-2 |
+| ----- | ----- |
+| _GRAV-4 - Um incidente leve que afeta a usabilidade do produto, mas não o interrompe._ | _GRAV-5 - Bugs ou problemas de suporte que não afetam a usabilidade do produto._ |
+| Embora exija um cenário extremo, é importante para alguns clientes saberem o limite de unidades que eles podem adicionar ao carrinho de compras, ainda que eles possam alterar a quantidade na tela seguinte. | Como é uma ferramenta utilizada mais na visão do administrador ou técnico e vai ser pouco utilizada, seu grau de criticidade é baixíssimo, mas não deixa de ser um ponto a melhorar. |
 
 ## 7 - SLA de Resolução
 
 ### SLA para o REQ-1:
 
-1. **Tempo de Resolução:** A equipe de desenvolvimento se compromete a investigar e corrigir o problema de limite de quantidade no carrinho de compras dentro de 1 mês após a identificação do incidente.
+1. **Tempo de Resolução:** 1 mês.
 
-2. **Prioridade do Incidente:** O problema será classificado como de baixa prioridade (GRAV-4), devido ao impacto direto na funcionalidade essencial de adicionar produtos ao carrinho de compras, mas por ser para cenários extremos.
+2. **Prioridade do Incidente:** Baixa.
 
-3. **Atualização de Status:** A equipe de suporte informará o progresso da resolução do incidente a cada 1 semana até que o problema seja completamente resolvido.
+3. **Atualização de Status:** 1 vez por semana até a resolução.
 
-4. **Compensação ao Cliente:** Se o problema não for resolvido dentro do prazo acordado, os clientes receberão um bônus no serviço contratado equivalente a 2% do valor acordado.
+4. **Compensação ao Cliente:** 2% de devolução do valor acordado.
 
-5. **Monitoramento Contínuo:** Após a resolução do incidente, o sistema será monitorado continuamente para garantir que o limite de quantidade no carrinho de compras funcione corretamente sem comprometer outras funionalidades.
 
 ## 8 - Template de Reporte de Defeito
 
