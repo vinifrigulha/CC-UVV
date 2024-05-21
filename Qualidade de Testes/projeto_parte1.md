@@ -246,4 +246,8 @@ Esta seção descreve os recursos de ambiente de teste (hardware e software) nec
 
 ## 8 - Links do GitHub
 
-[Plano de Testes](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/readme.md)
+Link da [parte 1](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/projeto_parte1.md)
+
+Link da [parte 2](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/projeto_parte2.md)
+
+Link da [parte 3](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/projeto_parte3.md)
