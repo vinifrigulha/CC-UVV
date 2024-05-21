@@ -1,19 +1,19 @@
 # 1 - Requisitos Funcionais (RF):
 
 ## RF001: Carrinho de Compras
-- **Cenário de Teste 01: Campo de Quantidade**
-  - CT 01: [Dígitos numéricos], [Quantidade alterada com sucesso]
-  - CT 02: [Dígitos alfabéticos], [Erro: Não reconhece entrada alfabética]
-  - CT 03: [Ponto flutuante], [Erro: Não reconhece ponto flutuante]
-  - CT 04: [Caracteres especiais], [Erro: Não reconhece caracteres especiais]
+- **Cenário de Teste 01: Validação do Tipo de Entrada do Campo de Quantidade**
+  - CT 01: [Inserir "1" no campo quantidade], [Valor aceito]
+  - CT 02: [Digitar "a"], [Erro: Não reconhece entrada alfabética]
+  - CT 03: [Digitar "1.5"], [Erro: Não reconhece ponto flutuante]
+  - CT 04: [Digitar "#"], [Erro: Não reconhece caracteres especiais]
 
 
-- **Cenário de Teste 02: Valores aceitos**
-  - CT 01: [Números entre 1 e 999.999.999, incluindo-os], [Quantidade aceita]
-  - CT 02: [Valor igual a zero], [Erro: O sistema retorna automaticamente para 1]
-  - CT 03: [Número maior que 999.999.999], [Erro: O sistema altera automaticamente para 999.999.999 e bloqueia novos dígitos]
-  - CT 04: [Números negativos], [Erro: O sistema não reconhece o símbolo '-' que indica valores negativos]
-  - CT 05: [Deixar em branco], [Erro: Não acontece nada a princípio, mas ao minimizar o carrinho, ele retorna ao valor que estava antes de apagar tudo]
+- **Cenário de Teste 02: Validação dos Valores Aceitos do Campo de Quantidade**
+  - CT 01: [Digitar "1"], [Valor aceito]
+  - CT 02: [Digitar "0"], [Erro: O sistema retorna automaticamente para 1]
+  - CT 03: [Digitar "1111111111" (10 números '1')], [Erro: O sistema altera automaticamente para 999.999.999 e bloqueia novos dígitos]
+  - CT 04: [Digitar "-1"], [Erro: O sistema não reconhece o símbolo '-']
+  - CT 05: [Deixar o campo de quantidade em branco], [Erro: Não acontece nada a princípio, mas ao minimizar o carrinho, ele retorna ao valor que estava antes de apagar tudo]
 
 - **Cenário de Teste 03: Botões de '+' e '-'**
   - CT 01: [Valor atual igual a 1], [Botão '-' fica desabilitado e o botão '+' fica habilitado]
