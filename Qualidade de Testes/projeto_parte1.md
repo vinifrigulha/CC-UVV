@@ -231,11 +231,11 @@ Esta seção descreve os recursos de ambiente de teste (hardware e software) nec
 
 | Nível de Criticidade de Defeito | Descrição | Tempo de Resolução | Atualização de Status | Compensação do Cliente |
 | :-----------------------------: | :-------- | :----------------: | :-------------------- | :--------------------- |
-| GRAV-1 | Defeito que causa parada total do sistema ou impede o uso da funcionalidade principal. | 2-4 horas | 30% de desconto na próxima fatura ou extensão de serviço gratuito equivalente a 1 semana de uso. | 
+| GRAV-1 | Defeito que causa parada total do sistema ou impede o uso da funcionalidade principal. | 2-4 horas | A cada 30 minutos | 30% de desconto na próxima fatura ou extensão de serviço gratuito equivalente a 1 semana de uso. | 
 | GRAV-2 | Defeito que causa perda significativa de funcionalidade, mas permite que o sistema continue operando com limitações importantes. | 1 dia útil | A cada 2 horas | 20% de desconto na próxima fatura |
 | GRAV-3 | Defeito que causa inconveniência ou redução de desempenho, mas possui uma solução alternativa temporária. | 3-5 dias úteis | Diariamente | 10% de desconto na próxima fatura |
 | GRAV-4 | Um incidente leve que afeta a usabilidade do produto, mas não o interrompe. | 1 mês | Semanalmente | 5% de desconto na próxima fatura |
-| GRAV-5 | Bugs ou problemas de suporte que não afetam a usabilidade do produto. | 2-3 meses | Sem compensação |
+| GRAV-5 | Bugs ou problemas de suporte que não afetam a usabilidade do produto. | 2-3 meses | Mensalmente | Sem compensação |
 
 
 ## 7 - Componentes
