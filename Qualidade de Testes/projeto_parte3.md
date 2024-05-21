@@ -19,7 +19,7 @@
 - *Comportamento Esperado:*
 A quantidade digitada deveria ser mantida e não alterada para uma limite.
 
-- *Evidências do teste do REQ-1:*
+- *Evidências:*
 
 ![Carrinho de compras com unidade de 9 dígitos](images/carrinho1.png)
 
@@ -39,13 +39,13 @@ A quantidade digitada deveria ser mantida e não alterada para uma limite.
 3. Adicione no campo "Logo" a imagem [Logo UVV](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/logo_uvv.png);
 4. Adicione no campo "Imagem de Fundo" a imagem [Imagem de Fundo](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/wallpaper_uvv.png);
 5. Clique em "Visualizar";
-6. Repita os passos 3 e 4;
+6. Repita os passos 3, 4 e 5;
 7. **Resultado:** Na segunda vez ao clicar no botão "Visualizar", a barra superior desaparece, impedindo o usuário de navegar pelo portal.
 
 - *Comportamento Esperado:*
 A barra superior não deveria desaparecer.
 
-- *Evidências do teste do REQ-2:*
+- *Evidências:*
 
 ![Barra superior é mantida](images/tela_login1.png)
 
@@ -59,6 +59,10 @@ A barra superior não deveria desaparecer.
 | ------------------------- | ------------------------- | ----- | ------------------------------ |
 | Vinícius Frigulha Ribeiro | Gabriela Martins de Jesus | CC5N  | Qualidade e Testes de Software |
 
-# 3 - Link do GitHub
+# 3 - Links do GitHub
 
-[Evidência de Testes](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/projeto_parte3.md)
+Link da [parte 1](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/projeto_parte1.md)
+
+Link da [parte 2](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/projeto_parte2.md)
+
+Link da [parte 3](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/projeto_parte3.md)
