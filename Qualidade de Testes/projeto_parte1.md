@@ -223,9 +223,9 @@ Esta seção descreve os recursos de ambiente de teste (hardware e software) nec
 
 ## 6 - Níveis de Criticidades de Defeito
 
-| Nível de Criticidade de Defeito |                 Descrição                     |
-| :-----------------------------: | :-------------------------------------------- |
-| GRAV-1 | Um incidente crítico com impacto muito alto.  |
+| Nível de Criticidade de Defeito | Descrição | Tempo de Resolução | Atualização de Status | Compensação do Cliente |
+| :-----------------------------: | :-------- | :----------------: | :-------------------- | :--------------------- |
+| GRAV-1 |  Defeito que causa parada total do sistema ou impede o uso da funcionalidade principal. | 2-4 horas | 30% de desconto na próxima fatura ou extensão de serviço gratuito equivalente a 1 semana de uso. | 
 | GRAV-2 | Um incidente grave com impacto significativo. |
 | GRAV-3 | Um incidente com o potencial de se tornar um incidente grave se não for resolvido logo. |
 | GRAV-4 | Um incidente leve que afeta a usabilidade do produto, mas não o interrompe. |
@@ -240,62 +240,6 @@ Esta seção descreve os recursos de ambiente de teste (hardware e software) nec
 3. **Atualização de Status:** 1 vez por semana até a resolução.
 
 4. **Compensação ao Cliente:** 2% de devolução do valor acordado.
-
-
-## 8 - Template de Reporte de Defeito
-
-### 8.1 - Reporte do REQ-1:
-
-- *Data de Identificação:* 09/05/2024
-- *Descrição do Defeito:* Limite do Carrinho de Compras deveria ser maior
-- *Nome do Sistema/Software:* Mercado Eletrônico
-- *Ambiente:* STG (Testes)
-
-- *Passos para Reproduzir o Defeito:*
-
-1. Acessar o portal pelo Backoffice e substituir pelo usuário AA_ADM_TESTE;
-2. Acessar a tela "Transações" e clicar em "+ Requisição Normal";
-3. Selecionar um item e clicar em "Adicionar ao Carrinho";
-4. Abra o carrinho e digite uma quantidade de 9 dígitos qualquer;
-5. Agora, digite um décimo dígito;
-6. **Resultado:** O portal mudará a quantidade automaticamente para 999.999.999.
-
-- *Comportamento Esperado:*
-A quantidade digitada deveria ser mantida e não alterada para uma limite.
-
-- *Evidências do teste do REQ-1:*
-
-![Carrinho de compras com unidade de 9 dígitos](images/carrinho1.png)
-
-![Carrinho de compras com unidade de 10 dígitos](images/carrinho2.png)
-
-### 8.2 - Reporte do REQ-2:
-
-- *Data de Identificação:* 09/05/2024
-- *Descrição do Defeito:* Verificar se manterá a barra superior de navegação
-- *Nome do Sistema/Software:* Mercado Eletrônico
-- *Ambiente:* STG (Testes)
-
-- *Passos para Reproduzir o Defeito:*
-
-1. Acessar o portal pelo Backoffice e substituir pelo usuário AA_ADM_TESTE;
-2. Clicar em "... Mais", digitar "Personalizar Tela de Login" e clicar nessa opção;
-3. Adicione qualquer imagem em "Imagem de Fundo" e em "Logo";
-4. Clique em "Visualizar";
-5. Repita os passos 3 e 4;
-6. **Resultado:** Na segunda vez ao clicar no botão "Visualizar", a barra superior desaparece, impedindo o usuário de navegar pelo portal.
-
-- *Comportamento Esperado:*
-A barra superior não deveria desaparecer.
-
-- *Evidências do teste do REQ-2:*
-
-![Barra superior é mantida](images/tela_login1.png)
-
-![Barra superior ainda é mantida](images/tela_login2.png)
-
-![Barra superior desaparece](images/tela_login3.png)
-
 
 
 ## 9 - Componentes
