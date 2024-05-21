@@ -2,6 +2,7 @@
 
 <img src="images/logo_me.png" width=300>
 
+
 ## 1 - Introdução
 
 Este documento descreve os requisitos a testar, os tipos de testes definidos para cada iteração e os recursos de hardware e software a serem empregados no sistema do Mercado Eletrônico.
@@ -12,6 +13,7 @@ Com esse documento, você conseguirá:
 - Visualizar a listagem dos Requisitos testados.
 - Listar os elementos resultantes do projeto de testes.
 
+
 ## 2 - Sobre o Mercado Eletrônico
 
 O Mercado Eletrônico é uma empresa brasileira líder em soluções de comércio eletrônico B2B (business-to-business). Fundada em 1994, a empresa se destaca por oferecer uma plataforma robusta e abrangente para facilitar transações comerciais entre empresas.
@@ -19,6 +21,7 @@ O Mercado Eletrônico é uma empresa brasileira líder em soluções de comérci
 A missão do Mercado Eletrônico é simplificar e otimizar as compras corporativas por meio de tecnologia avançada. Eles oferecem uma variedade de serviços e soluções para ajudar empresas de todos os portes a melhorar seus processos de compras, desde a busca por fornecedores até a gestão de contratos e pagamentos.
 
 O Mercado Eletrônico tem sido reconhecido por sua inovação e compromisso em impulsionar a transformação digital no mercado B2B. Sua ampla experiência e presença no mercado brasileiro o tornam um parceiro confiável para empresas que buscam modernizar e aprimorar suas operações de compras e relacionamento com fornecedores.
+
 
 ## 3 - Requisitos de Teste
 
@@ -28,6 +31,7 @@ Esta seção contém os requisitos identificados como objetos dos testes ao long
 | --------- | -------------------------- |
 | REQ-1     | Carrinho de Compras        |
 | REQ-2     | Personalizar Tela de Login |
+
 
 ## 4 - Testes
 
@@ -161,6 +165,7 @@ Durante os testes realizados, ao se clicar duas vezes no botão "Visualizar" na 
 
 _Ambiente de Teste:_ Os testes foram realizados em um ambiente de teste dedicado que replica as condições do ambiente de produção.
 
+
 ## 5 - Recursos
 
 Esta seção descreve os recursos de ambiente de teste (hardware e software) necessários para execução dos testes que serão descritos nas subseções que seguem.
@@ -221,33 +226,24 @@ Esta seção descreve os recursos de ambiente de teste (hardware e software) nec
     </tr>
 </table>
 
+
 ## 6 - Níveis de Criticidades de Defeito
 
 | Nível de Criticidade de Defeito | Descrição | Tempo de Resolução | Atualização de Status | Compensação do Cliente |
 | :-----------------------------: | :-------- | :----------------: | :-------------------- | :--------------------- |
-| GRAV-1 |  Defeito que causa parada total do sistema ou impede o uso da funcionalidade principal. | 2-4 horas | 30% de desconto na próxima fatura ou extensão de serviço gratuito equivalente a 1 semana de uso. | 
-| GRAV-2 | Um incidente grave com impacto significativo. |
-| GRAV-3 | Um incidente com o potencial de se tornar um incidente grave se não for resolvido logo. |
-| GRAV-4 | Um incidente leve que afeta a usabilidade do produto, mas não o interrompe. |
-| GRAV-5 | Bugs ou problemas de suporte que não afetam a usabilidade do produto. |
-
-## 7 - SLA de Resolução
-
-1. **Tempo de Resolução:** 1 mês.
-
-2. **Prioridade do Incidente:** Baixa.
-
-3. **Atualização de Status:** 1 vez por semana até a resolução.
-
-4. **Compensação ao Cliente:** 2% de devolução do valor acordado.
+| GRAV-1 | Defeito que causa parada total do sistema ou impede o uso da funcionalidade principal. | 2-4 horas | 30% de desconto na próxima fatura ou extensão de serviço gratuito equivalente a 1 semana de uso. | 
+| GRAV-2 | Defeito que causa perda significativa de funcionalidade, mas permite que o sistema continue operando com limitações importantes. | 1 dia útil | A cada 2 horas | 20% de desconto na próxima fatura |
+| GRAV-3 | Defeito que causa inconveniência ou redução de desempenho, mas possui uma solução alternativa temporária. | 3-5 dias úteis | Diariamente | 10% de desconto na próxima fatura |
+| GRAV-4 | Um incidente leve que afeta a usabilidade do produto, mas não o interrompe. | 1 mês | Semanalmente | 5% de desconto na próxima fatura |
+| GRAV-5 | Bugs ou problemas de suporte que não afetam a usabilidade do produto. | 2-3 meses | Sem compensação |
 
 
-## 9 - Componentes
+## 7 - Componentes
 
 | Aluno                     | Professora                | Turma | Disciplina                     |
 | ------------------------- | ------------------------- | ----- | ------------------------------ |
 | Vinícius Frigulha Ribeiro | Gabriela Martins de Jesus | CC5N  | Qualidade e Testes de Software |
 
-## 10 - Link do GitHub
+## 8 - Links do GitHub
 
 [Plano de Testes](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/readme.md)
