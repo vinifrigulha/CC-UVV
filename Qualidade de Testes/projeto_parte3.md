@@ -42,6 +42,8 @@
 - *Comportamento Esperado:*
 A barra superior não deveria desaparecer.
 
+- *Nível de Criticidade:* **GRAV-4**
+
 - *Evidências:*
 
 ![Barra superior é mantida](images/evidencias/tela_login1.png)
@@ -49,6 +51,7 @@ A barra superior não deveria desaparecer.
 ![Barra superior ainda é mantida](images/evidencias/tela_login2.png)
 
 ![Barra superior desaparece](images/evidencias/tela_login3.png)
+
 
 # 2 - Componentes
 
