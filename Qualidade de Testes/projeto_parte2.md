@@ -3,17 +3,17 @@
 ## RF001: Carrinho de Compras
 - **Cenário de Teste 01: Validação do Tipo de Entrada do Campo de Quantidade**
   - CT 01: [Inserir "1" no campo quantidade], [Valor aceito]
-  - CT 02: [Digitar "a"], [Erro: Não reconhece entrada alfabética]
-  - CT 03: [Digitar "1.5"], [Erro: Não reconhece ponto flutuante]
-  - CT 04: [Digitar "#"], [Erro: Não reconhece caracteres especiais]
+  - CT 02: [Digitar "a" no campo quantidade], [Erro: Não reconhece entrada alfabética]
+  - CT 03: [Digitar "1.5" no campo quantidade], [Erro: Não reconhece ponto flutuante]
+  - CT 04: [Digitar "#" no campo quantidade], [Erro: Não reconhece caracteres especiais]
     - **OBS:** Para todos os testes foi utilizado o item "ROTULO F50 DI 0W20 1L(F)".
 
 
 - **Cenário de Teste 02: Validação dos Valores Aceitos do Campo de Quantidade**
-  - CT 01: [Digitar "1"], [Valor aceito]
-  - CT 02: [Digitar "0"], [Erro: O sistema retorna automaticamente para 1]
-  - CT 03: [Digitar "1111111111" (10 números '1')], [Erro: O sistema altera automaticamente para 999.999.999 e bloqueia novos dígitos]
-  - CT 04: [Digitar "-1"], [Erro: O sistema não reconhece o símbolo '-']
+  - CT 01: [Digitar "1" no campo quantidade], [Valor aceito]
+  - CT 02: [Digitar "0" no campo quantidade], [Erro: O sistema retorna automaticamente para 1]
+  - CT 03: [Digitar "1111111111" (10 números '1') no campo quantidade], [Erro: O sistema altera automaticamente para 999.999.999 e bloqueia novos dígitos]
+  - CT 04: [Digitar "-1" no campo quantidade], [Erro: O sistema não reconhece o símbolo '-']
   - CT 05: [Apagar a quantidade e deixar o campo de quantidade em branco], [Erro: Não acontece nada a princípio, mas ao minimizar o carrinho, ele retorna ao valor que estava antes de apagar tudo]
     - **OBS:** Para todos os testes foi utilizado o item "ROTULO F50 DI 0W20 1L(F)".
 
