@@ -14,10 +14,7 @@
 3. Selecionar o item "ROTULO F50 DI 0W20 1L(F)" e clicar em "Adicionar ao Carrinho";
 4. Abra o carrinho e digite 111.111.111;
 5. Agora, digite outro dígito "1";
-6. **Resultado:** O portal mudará a quantidade automaticamente para 999.999.999.
-
-- *Comportamento Esperado:*
-A quantidade digitada deveria ser mantida e não alterada para uma limite.
+6. **Resultado:** O portal mudará a quantidade automaticamente para 999.999.999 e bloqueará novos dígitos.
 
 - *Evidências:*
 
