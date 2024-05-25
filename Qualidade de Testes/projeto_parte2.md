@@ -13,26 +13,19 @@
   - CT 02: [Digitar "0"], [Erro: O sistema retorna automaticamente para 1]
   - CT 03: [Digitar "1111111111" (10 números '1')], [Erro: O sistema altera automaticamente para 999.999.999 e bloqueia novos dígitos]
   - CT 04: [Digitar "-1"], [Erro: O sistema não reconhece o símbolo '-']
-  - CT 05: [Deixar o campo de quantidade em branco], [Erro: Não acontece nada a princípio, mas ao minimizar o carrinho, ele retorna ao valor que estava antes de apagar tudo]
-
-- **Cenário de Teste 03: Botões de '+' e '-'**
-  - CT 01: [Valor atual igual a 1], [Botão '-' fica desabilitado e o botão '+' fica habilitado]
-  - CT 02: [Valor atual igual a 999.999.999], [O botão '+' fica desabilitado e o botão '-' fica habilitado]
-  - CT 03: [Valor entre 1 e 999.999.999, excluindo-os], [A quantidade é adicionada de 1 em 1 pelo botão '+' e subtraída de 1 em 1 pelo botão '-']
-  - CT 04: [Clicar no botão desabilitado], [Nada acontece com a quantidade]
-  - CT 05: [Digitar uma quantidade válida e apertar um dos botões], [É adicionada/subtraída de 1 em 1 a partir da quantidade digitada]
+  - CT 05: [Apagar a quantidade e deixar o campo de quantidade em branco], [Erro: Não acontece nada a princípio, mas ao minimizar o carrinho, ele retorna ao valor que estava antes de apagar tudo]
 
 
 ## RF002: Personalizar Tela de Login
-- **Cenário de Teste 01: Formatos de imagem**
-  - CT 01: [Enviar imagem no formato PNG], [Formato aceito]
-  - CT 02: [Enviar imagem no formato JPG], [Formato aceito]
-  - CT 03: [Enviar imagem no formato GIF], [Formato aceito]
-  - CT 04: [Enviar imagem no formato SVG], [Erro: Formato não aceito]
-  - CT 05: [Enviar imagem no formato WEBP], [Erro: Formato não aceito]
-  - CT 06: [Enviar formatos de texto como PDF, DOCX, XLSX, PPTX, etc.], [Erro: Formatos não aceitos]
-  - CT 07: [Enviar formatos de vídeo como MP4, MOV, WMV, etc.], [Erro: Formatos não aceitos]
-  - CT 08: [Enviar formatos de áudio como MP3, WMA, WAV, etc.], [Erro: Formatos não aceitos]
+- **Cenário de Teste 01: Validação do Formatos de Imagem para Upload**
+  - CT 01: [Enviar a imagem do formato [PNG](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/imagens/imagem_png.png) nos campos "Imagem de Fundo" e "Logo"], [Formato aceito]
+  - CT 02: [Enviar a imagem do formato [JPG](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/imagens/imagem_jpg.jpg) nos campos "Imagem de Fundo" e "Logo"], [Formato aceito]
+  - CT 03: [Enviar a imagem do formato [GIF](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/imagens/imagem_gif.gif) nos campos "Imagem de Fundo" e "Logo"], [Formato aceito]
+  - CT 04: [Enviar a imagem do formato [SVG](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/imagens/imagem_svg.svg) nos campos "Imagem de Fundo" e "Logo"], [Erro: Formato não aceito]
+  - CT 05: [Enviar a imagem do formato [WEBP](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/imagens/imagem_webp.webp) nos campos "Imagem de Fundo" e "Logo"], [Erro: Formato não aceito]
+  - CT 06: [Enviar os arquivos a seguir: [PDF](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/arquivos/arquivo_pdf.pdf), [DOCX](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/arquivos/arquivo_docx.docx), [XLSX](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/arquivos/arquivo_xlsx.xlsx) e [PPTX](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/arquivos/arquivo_pptx.pptx) nos campos "Imagem de Fundo" e "Logo"], [Erro: Formatos não aceitos]
+  - CT 07: [Enviar os vídeos a seguir: [MP4](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/videos/video_mp4.mp4), [MOV](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/videos/video_mov.mov) e [WMV](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/videos/video_wmv.wmv) nos campos "Imagem de Fundo" e "Logo"], [Erro: Formatos não aceitos]
+  - CT 08: [Enviar formatos de áudio como [MP3](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/audios/audio_mp3.mp3), [WMA](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/audios/audio_wma.wma) e [WAV](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/audios/audio_wav.wav) nos campos "Imagem de Fundo" e "Logo"], [Erro: Formatos não aceitos]
 
 - **Cenário de Teste 02: Dimensão da imagem**
   - CT 01: [Enviar imagens com dimensões entre 1x1 e 9.000x9.000], [Dimensões aceitas]
