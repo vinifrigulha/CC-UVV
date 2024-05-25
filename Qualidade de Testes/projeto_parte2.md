@@ -17,7 +17,7 @@
 
 
 ## RF002: Personalizar Tela de Login
-- **Cenário de Teste 01: Validação do Formatos de Imagem para Upload**
+- **Cenário de Teste 01: Validação de Formatos de Imagem para Upload**
   - CT 01: [Enviar a imagem do formato [PNG](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/imagens/imagem_png.png) nos campos "Imagem de Fundo" e "Logo"], [Formato aceito]
   - CT 02: [Enviar a imagem do formato [JPG](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/imagens/imagem_jpg.jpg) nos campos "Imagem de Fundo" e "Logo"], [Formato aceito]
   - CT 03: [Enviar a imagem do formato [GIF](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/imagens/imagem_gif.gif) nos campos "Imagem de Fundo" e "Logo"], [Formato aceito]
@@ -27,10 +27,9 @@
   - CT 07: [Enviar os vídeos a seguir: [MP4](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/videos/video_mp4.mp4), [MOV](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/videos/video_mov.mov) e [WMV](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/videos/video_wmv.wmv) nos campos "Imagem de Fundo" e "Logo"], [Erro: Formatos não aceitos]
   - CT 08: [Enviar formatos de áudio como [MP3](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/audios/audio_mp3.mp3), [WMA](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/audios/audio_wma.wma) e [WAV](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/audios/audio_wav.wav) nos campos "Imagem de Fundo" e "Logo"], [Erro: Formatos não aceitos]
 
-- **Cenário de Teste 02: Dimensão da imagem**
-  - CT 01: [Enviar imagens com dimensões entre 1x1 e 9.000x9.000], [Dimensões aceitas]
-  - **OBS<sub>1</sub>:** Não foram encontrados exemplos o suficiente para realizar os testes, mas para dimensões usuais o sistema se mostrou capaz de suportá-las.
-  - **OBS<sub>2</sub>:** Algumas dimensões, por não serem no padrão da tela do navegador, acabaram desformatando as imagens.
+- **Cenário de Teste 02: Validação de Dimensões de Imagem para Upload***
+  - CT 01: [Enviar a imagem [1x2](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/imagens/imagem_pequenae.jpg)], [Dimensão aceita]
+  - CT 02: [Enviar a imagem [10000000000000000x15002148689299526](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/imagens/imagem_grande.jpg)], [Dimensão aceita]
 
 - **Cenário de Teste 03: Tamanho da imagem**
   - CT 01: [Enviar imagens de 8,53MB], [Dimensão aceita]
@@ -75,15 +74,6 @@
     - **Resposta da plataforma:** "Erro na entrada de requisição 0: Numero da requisicao cliente não informado."
   - CT 08: [Enviar uma tag incorreta], [Erro: Código 400 (Bad Request)]
   - CT 09: [Enviar uma tag que não existe], [A integração é feita com sucesso (Código 200), logo a plataforma apenas ignorou a tag inexistente]
-
-- **Cenário de Teste 02: Integração via Planilhas do Excel (Cargas) - interno à plataforma**
-  - CT 01: [Enviar todas as colunas e abas com os devidos nomes e valores válidos e aceitos], [Status Processado]
-    - **OBS:** A plataforma utiliza a terminologia *"Processado"* para indicar sucesso no envio da carga.
-  - CT 02: [Enviar com dados inválidos], [Erro: Status Erro]
-  - CT 03: [Enviar sem abas obrigatórias], [Erro: Status Erro]
-  - CT 04: [Enviar sem colunas obrigatórias], [Erro: Status Erro]
-  - CT 05: [Enviar tipo de dado incorretos em determinadas colunas], [Erro: Status Erro]
-  - CT 06: [Enviar coluna inexistente], [Erro: Status Erro]
 
 
 # 3 - Componentes:
