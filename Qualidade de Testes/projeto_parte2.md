@@ -28,7 +28,7 @@
   - CT 08: [Enviar formatos de áudio como [MP3](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/audios/audio_mp3.mp3), [WMA](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/audios/audio_wma.wma) e [WAV](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/audios/audio_wav.wav) nos campos "Imagem de Fundo" e "Logo"], [Erro: Formatos não aceitos]
 
 - **Cenário de Teste 02: Validação de Dimensões de Imagem para Upload***
-  - CT 01: [Enviar a imagem [1x2](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/imagens/imagem_pequenae.jpg)], [Dimensão aceita]
+  - CT 01: [Enviar a imagem [1x2](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/imagens/imagem_pequena.jpg)], [Dimensão aceita]
   - CT 02: [Enviar a imagem [10000000000000000x15002148689299526](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/imagens/imagem_grande.jpg)], [Dimensão aceita]
 
 - **Cenário de Teste 03: Tamanho da imagem**
