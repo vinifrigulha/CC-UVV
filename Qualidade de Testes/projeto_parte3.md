@@ -3,6 +3,8 @@
 - *Descrição do Defeito:* Verificar se manterá a barra superior de navegação
 - *Nome do Sistema/Software:* Mercado Eletrônico
 - *Ambiente:* STG (Testes)
+- *Resultado:* Na segunda vez ao clicar no botão "Visualizar", a barra superior desaparece, impedindo o usuário de navegar pelo portal
+- *Status:* Falhou
 
 - *Passos para Reproduzir o Defeito:*
 
@@ -12,12 +14,12 @@
 4. Adicione no campo "Imagem de Fundo" a imagem [Imagem de Fundo](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/images/testes/wallpaper_uvv.png);
 5. Clique em "Visualizar";
 6. Repita os passos 3, 4 e 5;
-7. **Resultado:** Na segunda vez ao clicar no botão "Visualizar", a barra superior desaparece, impedindo o usuário de navegar pelo portal.
+7. **Acontece o defeito.**
 
 - *Comportamento Esperado:*
-A barra superior não deveria desaparecer.
+A barra superior não deveria desaparecer, independente da quantidade de vezes que o botão "Visualizar" for pressionado.
 
-- *Nível de Criticidade:* **GRAV-4**
+- *Nível de Criticidade:* **GRAV-4** - Descrição [aqui](https://github.com/vinifrigulha/UVV/blob/main/Qualidade%20de%20Testes/projeto_parte1.md#6---níveis-de-criticidades-de-defeito).
 
 - *Evidências:*
 
