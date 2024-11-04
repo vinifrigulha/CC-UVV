@@ -45,10 +45,10 @@ class Imagem:
             y = 0
         elif y >= self.altura:
             y = self.altura - 1
-        return self.pixels[y * self.largura + x] # (AJUSTE - V.F.R.)
+        return self.pixels[y * self.largura + x] # Inclusão do índice 'y * self.largura + x' (AJUSTE - V.F.R.)
 
     def set_pixel(self, x, y, c):
-        self.pixels[y * self.largura + x] = c    # (AJUSTE - V.F.R.)
+        self.pixels[y * self.largura + x] = c    # Inclusão do índice 'y * self.largura + x' (AJUSTE - V.F.R.)
 
     def aplicar_por_pixel(self, func):
         resultado = Imagem.nova(self.largura, self.altura)
@@ -56,16 +56,21 @@ class Imagem:
             for y in range(resultado.altura):
                 cor = self.get_pixel(x, y)
                 nova_cor = func(cor)
-                resultado.set_pixel(x, y, nova_cor) # Inverção de 'x' com 'y' e indentação (AJUSTE - V.F.R.)
+                resultado.set_pixel(x, y, nova_cor) # Inverção de 'x' com 'y' e correção da indentação (AJUSTE - V.F.R.)
         return resultado
 
     def invertida(self):
-        return self.aplicar_por_pixel(lambda c: 255 - c) # Correção para '255 - c' (AJUSTE - V.F.R.)
+        """
+        Método responsável por fazer a inversão das cores de imagens
+        através do cáculo 'i = 255 - o', onde 'i' é o valor do pixel 
+        da imagem invertida e 'o' é o pixel da imagem original.
+        """
+        return self.aplicar_por_pixel(lambda c: 255 - c) # Correção de '266' para '255' (AJUSTE - V.F.R.)
     
     # Método para ajustar os valores dos pixels das imagens (V.F.R.)
     def ajusta_pixel(self):
         """
-        Método que garante que os valores dos pixels sejam inteiros e que assumam valores
+        Método que garante que os valores dos pixels assumam valores
         entre 0 e 255 incluindo-os.
         """
         for x in range(self.largura):
@@ -93,13 +98,17 @@ class Imagem:
         resultado = Imagem.nova(self.largura, self.altura)
         deslocamento = len(kernel) // 2 # Deslocamento do pixel
 
+        # Percorrendo todos os pixels da imagem (largura x altura)
         for x in range(self.largura):
             for y in range(self.altura):
+                
+                # Variável que acumula o valor da operação de correlação
                 soma = 0
+                
                 # Aplica o kernel ao redor do pixel atual
                 for i in range(len(kernel)):
                     for j in range(len(kernel)):
-                        # Coordenadas do pixel no kernel em relação ao centro
+                        # Coordenadas deslocadas do pixel no kernel em relação ao centro
                         pixel_x = x + j - deslocamento
                         pixel_y = y + i - deslocamento
 
@@ -111,16 +120,26 @@ class Imagem:
         return resultado
     
     def retorna_kernel(self, n):
+        """
+        Método que retorna um kernel de suavização ('blur')
+        de dimensões n x n, aplicando um desfoque uniforme.
+        """
         valor_kernel = 1 / (n * n)
         kernel = [[valor_kernel for _ in range(n)] for _ in range(n)]
         return kernel
 
     def borrada(self, n):
+        """
+        Método que aplica um efeito de desfoque na imagem.
+        """
         resultado = self.correlacao(self.retorna_kernel(n))
         resultado.ajusta_pixel()
         return resultado
 
     def focada(self, n):
+        """
+        Método que aplica efeito de nitidez na imagem.
+        """
         imagem_borrada = self.borrada(n)  # Aplica o desfoque
         resultado = Imagem.nova(self.largura, self.altura)
 
@@ -134,14 +153,17 @@ class Imagem:
         return resultado
 
     def bordas(self):
+        """
+        Método que reconhece as bordas de uma imagem.
+        """
         # Kernels de Sobel para detectar bordas
-        kernel_x = [
+        kernel_x = [        # Kernel de tratamento horizontal (bordas verticais)
             [-1, 0, 1],
             [-2, 0, 2],
             [-1, 0, 1]
         ]
         
-        kernel_y = [
+        kernel_y = [        # Kernel de tratamento vertical (bordas horizontais)
             [1, 2, 1],
             [0, 0, 0],
             [-1, -2, -1]
