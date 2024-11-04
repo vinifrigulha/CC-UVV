@@ -152,26 +152,40 @@ class Imagem:
         resultado.ajusta_pixel()  # Ajusta os valores dos pixels para garantir que estejam entre 0 e 255
         return resultado
 
-    def bordas(self):
+    # Método auxiliar para realizar testes do Kernel Ox (V.F.R.)
+    def bordas_x(self):
         """
-        Método que reconhece as bordas de uma imagem.
+        Método que faz o tratamento horizontal (bordas verticais)
         """
-        # Kernels de Sobel para detectar bordas
-        kernel_x = [        # Kernel de tratamento horizontal (bordas verticais)
+        kernel_x = [
             [-1, 0, 1],
             [-2, 0, 2],
             [-1, 0, 1]
         ]
-        
-        kernel_y = [        # Kernel de tratamento vertical (bordas horizontais)
+
+        return self.correlacao(kernel_x)
+
+    # Método auxiliar para realizar testes do Kernel Oy (V.F.R.)
+    def bordas_y(self):
+        """
+        Método que faz o tratamento vertical (bordas horizontais)
+        """
+        kernel_y = [
             [1, 2, 1],
             [0, 0, 0],
             [-1, -2, -1]
         ]
-        
+
+        return self.correlacao(kernel_y)  
+    
+    # Método que faz o tratamento das bordas de uma imagem (V.F.R.)
+    def bordas(self):
+        """
+        Método que reconhece as bordas de uma imagem.
+        """
         # Aplica correlação para as bordas
-        bordas_x = self.correlacao(kernel_x)
-        bordas_y = self.correlacao(kernel_y)
+        bordas_x = self.bordas_x()
+        bordas_y = self.bordas_y()
 
         # Cria a imagem de bordas combinando os resultados
         largura, altura = self.largura, self.altura
@@ -340,6 +354,7 @@ if __name__ == '__main__':
     # QUESTÃO 02 - INVERTER A IMAGEM 'BLUEGILL.PNG' (V.F.R.):
     imagem_original_q2 = Imagem.carregar('test_images/bluegill.png')   # Carregando a imagem original
     imagem_invertida = imagem_original_q2.invertida()                  # Invertendo a imagem
+    # imagem_invertida.mostrar()
     imagem_invertida.salvar('results_vini/Q02_bluegill_invertida.png') # Salvando a imagem no path indicado
 
     # QUESTÃO 04 - APLICAR O KERNEL NA IMAGEM 'PIGBIRD'
@@ -355,22 +370,31 @@ if __name__ == '__main__':
         [0, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0]]
     imagem_correlacao = imagem_original_q4.correlacao(kernel_q4)
+    # imagem_correlacao.mostrar()
     imagem_correlacao.salvar('results_vini/Q04_pigbird_correlacao.png')
 
     # GERANDO A IMAGEM BORRADA DO 'CAT.PNG'
     imagem_original_borrada = Imagem.carregar('test_images/cat.png')
     imagem_borrada = imagem_original_borrada.borrada(5)
+    # imagem_borrada.mostrar()
     imagem_borrada.salvar('results_vini/cat_borrada.png')
 
     # GERANDO A IMAGEM NÍTIDA DO 'PYTHON.PNG'
     imagem_original_nitida = Imagem.carregar('test_images/python.png')
     imagem_nitida = imagem_original_nitida.focada(11)
+    # imagem_nitida.mostrar()
     imagem_nitida.salvar('results_vini/python_nitida.png')
 
-    # GERANDO A IMAGEM COM DETECÇÃO DE BORDA DE 'CONSTRUCT.PNG'
-    imagem_original_bordas = Imagem.carregar('test_images/construct.png')
-    imagem_bordas = imagem_original_bordas.bordas()
-    imagem_bordas.salvar('results_vini/construct_bordas.png')
+    # QUESTÃO 06 - APLICAR BORDAS DA IMAGEM 'CONSTRUCTOR.PNG'
+    imagem_constructor = Imagem.carregar('test_images/constructor.png')
+    # imagem_Ox = imagem_constructor.bordas_x()
+    # imagem_Oy = imagem_constructor.bordas_y()
+    imagem_bordas = imagem_constructor.bordas()
+    # imagem_Ox.mostrar()       # Kernel Ox
+    # imagem_Oy.mostrar()       # Kernel Oy
+    # imagem_bordas.mostrar()   # Bordas Ox e Oy combinadas
+    imagem_bordas.salvar('results_vini/constructor_bordas.png')
+
     
     pass
 
